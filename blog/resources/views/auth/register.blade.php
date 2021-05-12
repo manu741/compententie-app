@@ -6,10 +6,10 @@
             <form action="{{ route('register') }}" method="post">
                 @csrf
                 <div class="mb-4">
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Your name" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('name') border-red-500 @enderror" value="{{ old('name') }}">
+                    <label for="firstname" class="sr-only">Name</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First name" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('firstname') border-red-500 @enderror" value="{{ old('firstname') }}">
 
-                    @error('name')
+                    @error('firstname')
                         <div class="text-red-500 mt-2 text-sm">
                             {{ $message }}
                         </div>
@@ -17,10 +17,21 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="username" class="sr-only">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Username" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('username') border-red-500 @enderror" value="{{ old('username') }}">
+                    <label for="lastname" class="sr-only">Name</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last name" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('lastname') border-red-500 @enderror" value="{{ old('lastname') }}">
 
-                    @error('username')
+                    @error('lastname')
+                    <div class="text-red-500 mt-2 text-sm">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="studentnr" class="sr-only">Studentnr</label>
+                    <input type="text" name="studentnr" id="studentnr" placeholder="Student number" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('studentnr') border-red-500 @enderror" value="{{ old('studentnr') }}">
+
+                    @error('studentnr')
                         <div class="text-red-500 mt-2 text-sm">
                             {{ $message }}
                         </div>
@@ -29,7 +40,7 @@
 
                 <div class="mb-4">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Your email" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('email') border-red-500 @enderror" value="{{ old('email') }}">
+                    <input type="text" name="email" id="email" placeholder="Your schoolmail" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('email') border-red-500 @enderror" value="{{ old('email') }}">
 
                     @error('email')
                         <div class="text-red-500 mt-2 text-sm">

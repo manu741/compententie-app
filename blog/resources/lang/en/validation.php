@@ -130,8 +130,20 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'firstname' => [
+            'regex' => 'First name may only contain letters'
+        ],
+        'lastname' => [
+            'regex' => 'Last name may only contain letters'
+        ],
+        'studentnr' => [
+            'required' => 'Student number is required',
+            'numeric' => 'Student number may only contain numbers',
+            'unique' => 'This student number already exists in our system'
+        ],
+        'email' => [
+            'unique' => 'This email already exists in our system',
+            'regex' => 'Invalid HU student mail'
         ],
     ],
 

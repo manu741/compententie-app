@@ -13,7 +13,7 @@ class RegisterController extends Controller
     {
         $this->middleware(['guest']);
     }
-    
+
     public function index()
     {
         return view('auth.register');
@@ -22,17 +22,20 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|max:255',
-            'username' => 'required|max:255',
-            'email' => 'required|email|max:255',
-            'password' => 'required|confirmed',
+            'firstname' => 'required|regex:/^[a-zA-Z]+$/u|max:255',
+            'lastname' => 'required|regex:/^[a-zA-Z]+$/u|max:255',
+            'studentnr' => 'required|numeric|digits:7|unique:users',
+            'email' => 'required|email|unique:users|regex:/(.*)student\.hu\.nl$/i|max:255',
+            'password' => 'required|min:7|confirmed',
         ]);
 
         User::create([
-            'name' => $request->name,
-            'username' => $request->username,
-            'email' => $request->email,
+            'firstname' => ucwords(strtolower($request->firstname)),
+            'lastname' => ucwords(strtolower($request->lastname)),
+            'studentnr' => $request->studentnr,
+            'email' => strtolower($request->email),
             'password' => Hash::make($request->password),
+            'clearance' => 'student'
         ]);
 
         auth()->attempt($request->only('email', 'password'));
