@@ -18,7 +18,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 
 Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
 
-Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
+Route::get('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
