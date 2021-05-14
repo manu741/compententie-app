@@ -4,16 +4,15 @@
     <div class="flex justify-center">
         <div class="w-8/12 bg-white p-6 rounded-lg">
 
-            <h2>Settings</h2>
             <div style='border-bottom: 2px solid #eaeaea'>
                 <ul class='flex cursor-pointer'>
-                    <li class='py-2 px-6 bg-white rounded-t-lg'>Gegevens</li>
-                    <li class='py-2 px-6 bg-white rounded-t-lg text-gray-500 bg-gray-200'>Afgesloten</li>
-                    <li class='py-2 px-6 bg-white rounded-t-lg text-gray-500 bg-gray-200'>Opleiding</li>
+                    <li class='py-2 px-6 bg-white rounded-t-lg' data-tab-target="#personal_data">Gegevens</li>
+                    <li class='py-2 px-6 bg-white rounded-t-lg tab text-gray-500 bg-gray-200' data-tab-target="#study">Opleiding</li>
+                    <li class='py-2 px-6 bg-white rounded-t-lg tab text-gray-500 bg-gray-200' data-tab-target="#pop">POP</li>
                 </ul>
             </div>
 
-            <div class="mt-5 md:mt-0 md:col-span-2">
+            <div class="mt-5 md:mt-0 md:col-span-2 active" id="personal_data" data-tab-content>
                 <form action="{{ route('settings') }}" method="POST">
                     @csrf
                     <div class="shadow overflow-hidden sm:rounded-md">
@@ -92,6 +91,47 @@
                 </form>
             </div>
 
+            <div class="mt-5 md:mt-0 md:col-span-2" id="study" data-tab-content>
+                Opleiding
+            </div>
+
+            <div class="mt-5 md:mt-0 md:col-span-2" id="pop" data-tab-content>
+                Pop
+            </div>
+
+
+
         </div>
     </div>
+
+    <script>
+        const tabs = document.querySelectorAll('[data-tab-target]');
+        const tabContents = document.querySelectorAll('[data-tab-content]');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = document.querySelector(tab.dataset.tabTarget)
+                tabContents.forEach(tabContent => {
+                    tabContent.classList.remove('active')
+                })
+                tabs.forEach(tab => {
+                    tab.classList.add('text-gray-500')
+                    tab.classList.add('bg-gray-200')
+                })
+                tab.classList.remove('bg-gray-200')
+                tab.classList.remove('text-gray-500')
+                target.classList.add('active')
+            })
+        })
+    </script>
+
+    <style>
+        [data-tab-content] {
+            display: none;
+        }
+
+        .active[data-tab-content] {
+            display: block;
+        }
+    </style>
 @endsection
