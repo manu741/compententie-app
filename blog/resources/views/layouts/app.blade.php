@@ -45,7 +45,7 @@
 
     <body class="bg-white">
 
-        <nav class=" bg-gray-100 dark:bg-gray-700 mb-5">
+        <nav class=" bg-gray-100 dark:bg-gray-700 mb-0">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
@@ -79,7 +79,7 @@
                                 <div class="ml-10 flex items-baseline space-x-4">
                                     <a href="{{ route('login')}}" style="transition: all .15s ease" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Inloggen</a>
 
-                                    <a href="{{ route('register')}}" style="transition: all .15s ease" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-blue-700 dark:hover:text-white dark:bg-gray-700 bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium">Registreren</a>
+                                    <a href="{{ route('register')}}" style="transition: all .15s ease" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-blue-700 dark:hover:text-white dark:bg-green-400 bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium">Registreren</a>
                                 </div>
                             @endguest
                                 @auth
@@ -160,9 +160,6 @@
         </nav>
 
         @yield('content')
-
-
-
     </body>
 
     <script>

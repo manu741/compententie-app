@@ -111,7 +111,22 @@
       <path value="$PROJECT_DIR$/blog/vendor/phpspec/prophecy" />
       <path value="$PROJECT_DIR$/blog/vendor/phpunit/php-invoker" />
       <path value="$PROJECT_DIR$/blog/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/blog/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/blog/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/blog/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/blog/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/blog/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/blog/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/blog/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/blog/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/blog/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/blog/vendor/seld/jsonlint" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/blog/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
 </project>
