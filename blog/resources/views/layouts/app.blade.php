@@ -14,7 +14,7 @@
 
     <body class="bg-white">
 
-        <nav class=" bg-gray-100 dark:bg-gray-700 mb-5">
+        <nav class="bg-gray-100 dark:bg-gray-700 mb-5">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
@@ -25,7 +25,7 @@
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
                                 @auth
-                                        <a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">POP</a>
+                                    <a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">POP</a>
                                 @endauth
                                 @auth
                                     <a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reflecties</a>
@@ -136,10 +136,47 @@
 
         @yield('content')
 
-
-
     </body>
+    <!-- component -->
 
+    <footer class="footer relative pt-1  mb-5">
+        <div style="border-bottom: solid gray;border-left: solid transparent;">
+            YO
+        </div>
+        <div class="container mx-auto px-6 dark:bg-gray-600  bg-gray-100">
+
+            <div class="sm:flex sm:mt-8">
+                <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
+                    <div class="flex flex-col">
+                        <span class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Menu</span>
+                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 1</a></span>
+                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 2</a></span>
+                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 3</a></span>
+                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 4</a></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contactgegevens</span>
+                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 1</a></span>
+                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 2</a></span>
+                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 3</a></span>
+                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 4</a></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <img src="https://www.mimir.nu/wp-content/uploads/2020/01/logo-hu-200x200-1.png" alt="Workflow" style="max-width:200px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-6">
+            <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+                <div class="sm:w-2/3 text-center py-6">
+                    <p class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                        © 2021 door de Codeerberen
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script>
 
         if (localStorage.theme === 'dark' || (!'theme' in localStorage && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
