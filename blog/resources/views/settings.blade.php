@@ -92,7 +92,54 @@
             </div>
 
             <div class="mt-5 md:mt-0 md:col-span-2" id="study" data-tab-content>
-                Opleiding
+                <form action="{{ route('settings') }}" method="POST">
+                    @csrf
+                    <div class="shadow overflow-hidden sm:rounded-md">
+                        <div class="px-4 py-5 bg-white sm:p-6">
+                            <div class="grid grid-cols-5 gap-5">
+
+                                <div class="col-span-3 sm:col-span-3">
+                                    <label for="your_study" class="block text-sm font-medium text-gray-700">Is dit jouw opleiding?</label>
+                                    <select id="your_study" name="your_study" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('your_study') border-red-500 @enderror">
+                                        <option disabled selected value> -- Kies één van de opties -- </option>
+                                        <option value="Ja">Ja</option>
+                                        <option value="Nee">Nee</option>
+                                    </select>
+
+                                    @error('your_study')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+
+                                </div>
+
+
+                                <div class="col-span-3 sm:col-span-3">
+                                    <label for="type" class="block text-sm font-medium text-gray-700">Type opleiding</label>
+                                    <select id="type" name="type" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('type') border-red-500 @enderror">
+                                        <option value="Associate degree">Associate degree</option>
+                                        <option value="Bachelor" selected="selected">Bachelor</option>
+                                    </select>
+
+                                    @error('type')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="px-4 py-3 bg-gray-50 text-left sm:px-6">
+                            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Gegevens aanppassen
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
             <div class="mt-5 md:mt-0 md:col-span-2" id="pop" data-tab-content>
