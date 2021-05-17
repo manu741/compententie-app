@@ -7,7 +7,6 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
         <title>Persoonlijk Ontwikkelings Plan</title>
 
     </head>
@@ -139,40 +138,42 @@
     </body>
     <!-- component -->
 
-    <footer class="footer relative pt-1  mb-5">
-        <div style="border-bottom: solid gray;border-left: solid transparent;">
-            YO
-        </div>
-        <div class="container mx-auto px-6 dark:bg-gray-600  bg-gray-100">
+    <footer class="footer relative dark:bg-gray-700 bg-gray-100 mb-5">
+        <div style="border-bottom: 50px solid #374151;border-left: 100vw solid #fff;" class="" ></div>
+
+        <div class="container mx-auto px-6 ">
 
             <div class="sm:flex sm:mt-8">
                 <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
                     <div class="flex flex-col">
-                        <span class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Menu</span>
-                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 1</a></span>
-                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 2</a></span>
-                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 3</a></span>
-                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 4</a></span>
+                        <span class="dark:text-white block px-3 py-2 rounded-md text-base font-medium"><b>Menu</b></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #1</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #2</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #3</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #4</a></span>
                     </div>
                     <div class="flex flex-col">
-                        <span class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contactgegevens</span>
-                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 1</a></span>
-                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 2</a></span>
-                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 3</a></span>
-                        <span class="my-2"><a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">link 4</a></span>
+                        <span class="dark:text-white block px-3 py-2 rounded-md text-base font-medium"><b>Contactgegevens</b></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #1</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #2</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #3</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #4</a></span>
                     </div>
                     <div class="flex flex-col">
-                        <img src="https://www.mimir.nu/wp-content/uploads/2020/01/logo-hu-200x200-1.png" alt="Workflow" style="max-width:200px;">
+                        <a target="_blank" href="https://www.hu.nl/"><img src="https://www.mimir.nu/wp-content/uploads/2020/01/logo-hu-200x200-1.png" alt="Workflow" style="max-width:200px;"></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container mx-auto px-6">
-            <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
-                <div class="sm:w-2/3 text-center py-6">
-                    <p class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                        © 2021 door de Codeerberen
-                    </p>
+
+        <div class="bg-white dark:bg-gray-900" style="width:100vw;">
+            <div class="container mx-auto px-6 ">
+                <div class="mt-16 flex flex-col items-center">
+                    <div class="sm:w-2/3 text-center py-6">
+                        <p class="dark:text-white text-black block px-3 py-2 rounded-md text-base font-medium">
+                            <b>2021 © De Codeerberen</b> | All Rights Reserved
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,6 +185,15 @@
         } else if (localStorage.theme === 'dark') {
             document.querySelector('html').classList.add('dark')
         }
+
+        // Whenever the user explicitly chooses light mode
+        localStorage.theme = 'light'
+
+        // Whenever the user explicitly chooses dark mode
+        localStorage.theme = 'dark'
+
+        // Whenever the user explicitly chooses to respect the OS preference
+        localStorage.removeItem('theme')
 
         document.getElementById('switchTheme').addEventListener('click', function() {
             let htmlClasses = document.querySelector('html').classList;
