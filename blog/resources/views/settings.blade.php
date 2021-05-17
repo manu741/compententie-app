@@ -51,7 +51,7 @@
                                 </div>
 
                                 <div class="col-span-5 sm:col-span-3 lg:col-span-3">
-                                    <label for="email" class="block text-sm font-medium text-gray-700">Email adres*</label>
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email adres</label>
                                     <input value="{{ auth()->user()->email  }}" type="text" name="email" placeholder="E-mail adres"  id="email"  class=" p-1.5 px-3 border-2 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('email') border-red-500 @enderror">
                                     @error('email')
                                     <div class="text-red-500 mt-2 text-sm">
@@ -111,23 +111,107 @@
                                         {{ $message }}
                                     </div>
                                     @enderror
-
                                 </div>
 
 
                                 <div class="col-span-3 sm:col-span-3">
-                                    <label for="type" class="block text-sm font-medium text-gray-700">Type opleiding</label>
-                                    <select id="type" name="type" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('type') border-red-500 @enderror">
+                                    <label for="study_type" class="block text-sm font-medium text-gray-700">Type opleiding</label>
+                                    <select id="study_type" name="study_type" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('study_type') border-red-500 @enderror">
                                         <option value="Associate degree">Associate degree</option>
                                         <option value="Bachelor" selected="selected">Bachelor</option>
                                     </select>
 
-                                    @error('type')
+                                    @error('study_type')
                                     <div class="text-red-500 mt-2 text-sm">
                                         {{ $message }}
                                     </div>
                                     @enderror
+                                </div>
 
+                                <div class="col-span-3 sm:col-span-3">
+                                    <label for="pop_unit" class="block text-sm font-medium text-gray-700">POP-cylcus eenheid</label>
+                                    <select id="pop_unit" name="pop_unit" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('pop_unit') border-red-500 @enderror">
+                                        <option value="Periode">Periode (blok)</option>
+                                        <option value="Semester" selected="selected">Semester</option>
+                                        <option value="Jaar">Jaar</option>
+                                    </select>
+
+                                    @error('pop_unit')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="study_name" class="block text-sm font-medium text-gray-700">Naam van opleiding</label>
+                                    <input value="{{ old('study_name')  }}" type="text"  placeholder="Opleiding..." name="study_name" id="firstname" autocomplete="given-name" class=" p-1.5 px-3 border-2 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('study_name') border-red-500 @enderror">
+
+                                    @error('study_name')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-span-3 sm:col-span-3">
+                                    <label for="niveau_jaar1" class="block text-sm font-medium text-gray-700">Niveau-eis einde jaar 1</label>
+                                    <select id="niveau_jaar1" name="niveau_jaar1" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('niveau_jaar1') border-red-500 @enderror">
+                                        <option value="level1" selected="selected">1</option>
+                                        <option value="level2">2</option>
+                                        <option value="level3">3</option>
+                                    </select>
+
+                                    @error('niveau_jaar1')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-span-3 sm:col-span-3">
+                                    <label for="niveau_jaar2" class="block text-sm font-medium text-gray-700">Niveau-eis einde jaar 2</label>
+                                    <select id="niveau_jaar2" name="niveau_jaar2" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('niveau_jaar2') border-red-500 @enderror">
+                                        <option value="level1" selected="selected">1</option>
+                                        <option value="level2">2</option>
+                                        <option value="level3">3</option>
+                                    </select>
+
+                                    @error('niveau_jaar2')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-span-3 sm:col-span-3">
+                                    <label for="niveau_jaar3" class="block text-sm font-medium text-gray-700">Niveau-eis einde jaar 3</label>
+                                    <select id="niveau_jaar3" name="niveau_jaar3" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('niveau_jaar3') border-red-500 @enderror">
+                                        <option value="level1" selected="selected">1</option>
+                                        <option value="level2">2</option>
+                                        <option value="level3">3</option>
+                                    </select>
+
+                                    @error('niveau_jaar3')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-span-3 sm:col-span-3">
+                                    <label for="niveau_jaar4" class="block text-sm font-medium text-gray-700">Niveau-eis einde jaar 4</label>
+                                    <select id="niveau_jaar4" name="niveau_jaar4" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('niveau_jaar4') border-red-500 @enderror">
+                                        <option value="level1" selected="selected">1</option>
+                                        <option value="level2">2</option>
+                                        <option value="level3">3</option>
+                                    </select>
+
+                                    @error('niveau_jaar4')
+                                    <div class="text-red-500 mt-2 text-sm">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
 
                             </div>
@@ -143,7 +227,12 @@
             </div>
 
             <div class="mt-5 md:mt-0 md:col-span-2" id="pop" data-tab-content>
-                Pop
+
+                <p>POP cycli | Periode | Afgesloten</p>
+                <p>Eerste    : dropdown | checkbox</p>
+
+
+
             </div>
 
 
