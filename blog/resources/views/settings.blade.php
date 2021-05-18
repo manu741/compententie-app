@@ -228,8 +228,86 @@
 
             <div class="mt-5 md:mt-0 md:col-span-2" id="pop" data-tab-content>
 
-                <p>POP cycli | Periode | Afgesloten</p>
-                <p>Eerste    : dropdown | checkbox</p>
+                <p>POP cycli | Periode  | Afgesloten</p>
+                <p>Eerste    | dropdown | checkbox</p>
+                <div class="container">
+                    <table class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
+                        <thead class="text-black">
+                        <tr class="bg-black-500 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
+                            <th class="p-3 text-left">POP Cyclus</th>
+                            <th class="p-3 text-left">Periode</th>
+                            <th class="p-3 text-left" width="110px">Afgesloten?</th>
+                        </tr>
+                        </thead>
+                        <tbody class="flex-1 sm:flex-none">
+                        <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                            <td class="border-grey-light border hover:bg-gray-100 p-3">1</td>
+                            <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">
+                                <select id="cylus1" name="cyclus1" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('cyclus1') border-red-500 @enderror">
+                                    <option value="level1" selected="selected">2020 - 2021</option>
+                                    <option value="level2">2021 - 2022</option>
+                                    <option value="level3">2022 -2023</option>
+                                </select>
+                            </td>
+                            <td class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer">
+                                <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" name="pop1check" checked/>
+                            </td>
+
+                        </tr>
+                        <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                            <td class="border-grey-light border hover:bg-gray-100 p-3">2</td>
+                            <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">
+                                <select id="cylus2" name="cyclus2" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('cyclus2') border-red-500 @enderror">
+                                    <option value="level1" selected="selected">2020 - 2021</option>
+                                    <option value="level2">2021 - 2022</option>
+                                    <option value="level3">2022 -2023</option>
+                                </select>
+                            </td>
+                            <td class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer">
+                                <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" name="pop2check" checked/>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                            <td class="border-grey-light border hover:bg-gray-100 p-3">3</td>
+                            <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">
+                                <select id="cylus3" name="cyclus3" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('cyclus3') border-red-500 @enderror">
+                                    <option value="level1" selected="selected">2020 - 2021</option>
+                                    <option value="level2">2021 - 2022</option>
+                                    <option value="level3">2022 -2023</option>
+                                </select>
+                            </td>
+                            <td class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer">
+                                <input type="checkbox" class="form-checkbox h-5 w-5 text-gray-600" name="pop3check" checked/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <style>
+                    html,
+                    body {
+                        height: 100%;
+                    }
+
+                    @media (min-width: 640px) {
+                        table {
+                            display: inline-table !important;
+                        }
+
+                        thead tr:not(:first-child) {
+                            display: none;
+                        }
+                    }
+
+                    td:not(:last-child) {
+                        border-bottom: 0;
+                    }
+
+                    th:not(:last-child) {
+                        border-bottom: 2px solid rgba(0, 0, 0, .1);
+                    }
+                </style>
 
 
 
