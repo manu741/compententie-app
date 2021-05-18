@@ -2,10 +2,6 @@
 
 @section('content')
     <div class="flex justify-center">
-<<<<<<< Updated upstream
-        <div class="w-8/12 bg-white p-6 rounded-lg">
-            Home
-=======
         <div class="w-full bg-white rounded-lg dark:bg-gray-700">
             <header>
 
@@ -91,7 +87,6 @@
                     </div>
                 </div>
             </div>
->>>>>>> Stashed changes
         </div>
     </div>
 @endsection
