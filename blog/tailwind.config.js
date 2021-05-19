@@ -3,6 +3,8 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
+        'mulish': ['Mulish', defaultTheme.fontFamily.sans-serif],
+
     }
   },
   variants: {

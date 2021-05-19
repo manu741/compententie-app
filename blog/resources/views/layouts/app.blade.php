@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+{{--<html lang="en" class="dark">--}}
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27');
+        </style>
 
         <title>Persoonlijk Ontwikkelings Plan</title>
 
     </head>
 
     <body class="bg-white">
-
-
-        <nav class=" bg-gray-100 dark:bg-gray-700 mb-5">
-
-        <nav class=" bg-gray-200 dark:bg-gray-700 mb-0">
-
-        <nav class="bg-gray-100 dark:bg-gray-700 mb-5">
+        <nav class=" bg-gray-100 dark:bg-gray-700">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
+                            <a href="{{route('home')}}"> <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"></a>
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
-                                <a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
+                                <a href="{{route('home')}}" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
                                 @auth
                                         <a href="{{route('popHome')}}" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">POP</a>
                                 @endauth
@@ -104,10 +102,8 @@
             <div class="md:hidden"  style="display:none" id="menu-mobile">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
 
-                    <a href="#" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
-
+                    <a href="{{route('home')}}" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
                     <div class="border-t dark:border-gray-500">
                         @guest
                                 <a href="{{ route('login')}}" style="transition: all .15s ease; margin-top:4px;" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Inloggen</a>
@@ -143,26 +139,27 @@
     </body>
     <!-- component -->
 
-    <footer class="footer relative dark:bg-gray-700 bg-gray-100 mb-5">
-        <div style="border-bottom: 50px solid #374151;border-left: 100vw solid #fff;" class="" ></div>
-
+    <footer class="footer relative dark:bg-gray-700 bg-gray-100">
+        <svg class="bg-gray-100 dark:bg-gray-700 fill-current text-white dark:text-gray-600" width="full" height="full" viewBox="0 0 2200 71" fill="rgb(55, 65, 81)" xmlns="http://www.w3.org/2000/svg" >
+            <path d="M2200 0L0 71V0H2200Z" fill=""/>
+        </svg>
         <div class="container mx-auto px-6 ">
 
             <div class="sm:flex sm:mt-8">
                 <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
                     <div class="flex flex-col">
                         <span class="dark:text-white block px-3 py-2 rounded-md text-base font-medium"><b>Menu</b></span>
-                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #1</a></span>
-                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #2</a></span>
-                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #3</a></span>
-                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #4</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-blue-600 dark:hover:text-green-300 block px-3 rounded-md text-base ">Link #1</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-blue-600 dark:hover:text-green-300 block px-3 rounded-md text-base ">Link #2</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-blue-600 dark:hover:text-green-300 block px-3 rounded-md text-base ">Link #3</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-blue-600 dark:hover:text-green-300 block px-3 rounded-md text-base ">Link #4</a></span>
                     </div>
                     <div class="flex flex-col">
                         <span class="dark:text-white block px-3 py-2 rounded-md text-base font-medium"><b>Contactgegevens</b></span>
-                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #1</a></span>
-                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #2</a></span>
-                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #3</a></span>
-                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 block px-3 rounded-md text-base ">Link #4</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-blue-600 dark:hover:text-green-300 block px-3 rounded-md text-base ">Link #1</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-blue-600 dark:hover:text-green-300 block px-3 rounded-md text-base ">Link #2</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-blue-600 dark:hover:text-green-300 block px-3 rounded-md text-base ">Link #3</a></span>
+                        <span class="my-1"><a href="#" class="dark:text-white text-gray-400 hover:text-blue-600 dark:hover:text-green-300 block px-3 rounded-md text-base ">Link #4</a></span>
                     </div>
                     <div class="flex flex-col">
                         <a target="_blank" href="https://www.hu.nl/"><img src="https://www.mimir.nu/wp-content/uploads/2020/01/logo-hu-200x200-1.png" alt="Workflow" style="max-width:200px;"></a>
@@ -171,7 +168,7 @@
             </div>
         </div>
 
-        <div class="bg-white dark:bg-gray-900" style="width:100vw;">
+        <div class="bg-white dark:bg-gray-900" style="width:100%;">
             <div class="container mx-auto px-6 ">
                 <div class="mt-16 flex flex-col items-center">
                     <div class="sm:w-2/3 text-center py-6">
