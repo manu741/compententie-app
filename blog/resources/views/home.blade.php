@@ -7,7 +7,7 @@
 
                         <div class="relative bg-white overflow-hidden">
                             <div class="mx-auto">
-                                <div class="relative z-10 pb-8 bg-gray-100 dark:bg-gray-700 sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32">
+                                <div class="relative pb-8 bg-gray-100 dark:bg-gray-700 sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32">
                                     <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
                                     </div>
                                     <main class="justify-center mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
@@ -19,11 +19,11 @@
                                                 Dit is een applicatie van de HU door de Codeerberen. Et has minim elitr entellegat. Mea aeterno eleigend antiopam ad, nam no suscipit quarerendum.
                                             </span>
                                             <div class="flex justify-center mt-10">
-                                                <a href="" class="w-3/12 flex items-center justify-center px-8 py-3 mr-10 mt-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 dark:bg-green-500 hover:bg-indigo-700 dark:hover:bg-green-600 md:py-4 md:text-lg md:px-10">
+                                                <a href="" class="w-3/12 flex items-center justify-center px-8 py-3 mr-10 mt-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-green-600 md:py-4 md:text-lg md:px-10">
                                                     Beginnen
                                                 </a>
 
-                                                <a href="" class="w-3/12 flex items-center justify-center px-8 py-3 ml-10 mt-2 border border-indigo-400 hover:border-indigo-700 text-base font-medium rounded-md text-indigo-400 hover:text-indigo-700 dark:bg-gray-700 dark:text-green-400 dark:border-green-400 dark:hover:text-green-600 dark:hover:border-green-600 md:py-4 md:text-lg md:px-10">
+                                                <a href="" class="w-3/12 flex items-center justify-center px-8 py-3 ml-10 mt-2 border border-blue-500 hover:border-blue-700 text-base font-medium rounded-md text-indigo-400 hover:text-indigo-700 dark:bg-gray-700 dark:text-green-400 dark:border-green-400 dark:hover:text-green-600 dark:hover:border-green-600 md:py-4 md:text-lg md:px-10">
                                                     Meer info
                                                 </a>
                                             </div>
