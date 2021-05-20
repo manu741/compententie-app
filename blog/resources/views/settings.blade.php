@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="flex justify-center">
         <div class="w-8/12 bg-white p-6 rounded-lg">
 
@@ -92,7 +93,7 @@
             </div>
 
             <div class="mt-5 md:mt-0 md:col-span-2" id="study" data-tab-content>
-                <form action="{{ route('settings') }}" method="POST">
+                <form action="" method="GET">
                     @csrf
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-white sm:p-6">
@@ -117,8 +118,9 @@
                                 <div class="col-span-3 sm:col-span-3">
                                     <label for="study_type" class="block text-sm font-medium text-gray-700">Type opleiding</label>
                                     <select id="study_type" name="study_type" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('study_type') border-red-500 @enderror">
-                                        <option value="Associate degree">Associate degree</option>
-                                        <option value="Bachelor" selected="selected">Bachelor</option>
+                                        <option disabled selected value > -- Kies één van de opties -- </option>
+                                        <option value="bachelor">Bachelor</option>
+                                        <option value="assdeg">Associate degree</option>
                                     </select>
 
                                     @error('study_type')
@@ -131,8 +133,9 @@
                                 <div class="col-span-3 sm:col-span-3">
                                     <label for="pop_unit" class="block text-sm font-medium text-gray-700">POP-cylcus eenheid</label>
                                     <select id="pop_unit" name="pop_unit" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('pop_unit') border-red-500 @enderror">
+                                        <option disabled selected value > -- Kies één van de opties -- </option>
                                         <option value="Periode">Periode (blok)</option>
-                                        <option value="Semester" selected="selected">Semester</option>
+                                        <option value="Semester">Semester</option>
                                         <option value="Jaar">Jaar</option>
                                     </select>
 
@@ -154,7 +157,7 @@
                                     @enderror
                                 </div>
 
-                                <div class="col-span-3 sm:col-span-3">
+                                <div class="col-span-3 sm:col-span-3 assdeg bachelor" style="display:none">
                                     <label for="niveau_jaar1" class="block text-sm font-medium text-gray-700">Niveau-eis einde jaar 1</label>
                                     <select id="niveau_jaar1" name="niveau_jaar1" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('niveau_jaar1') border-red-500 @enderror">
                                         <option value="level1" selected="selected">1</option>
@@ -169,7 +172,7 @@
                                     @enderror
                                 </div>
 
-                                <div class="col-span-3 sm:col-span-3">
+                                <div class="col-span-3 sm:col-span-3 assdeg bachelor" style="display:none">
                                     <label for="niveau_jaar2" class="block text-sm font-medium text-gray-700">Niveau-eis einde jaar 2</label>
                                     <select id="niveau_jaar2" name="niveau_jaar2" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('niveau_jaar2') border-red-500 @enderror">
                                         <option value="level1" selected="selected">1</option>
@@ -184,9 +187,9 @@
                                     @enderror
                                 </div>
 
-                                <div class="col-span-3 sm:col-span-3">
+                                <div class="col-span-3 sm:col-span-3 bachelor" style="display:none">
                                     <label for="niveau_jaar3" class="block text-sm font-medium text-gray-700">Niveau-eis einde jaar 3</label>
-                                    <select id="niveau_jaar3" name="niveau_jaar3" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('niveau_jaar3') border-red-500 @enderror">
+                                    <select id="niveau_jaar3" name="niveau_jaar3" class="mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('niveau_jaar3') border-red-500 @enderror">
                                         <option value="level1" selected="selected">1</option>
                                         <option value="level2">2</option>
                                         <option value="level3">3</option>
@@ -198,8 +201,9 @@
                                     </div>
                                     @enderror
                                 </div>
+                                    <div class="col-span-3 sm:col-span-3 bachelor" style="display:none">
 
-                                <div class="col-span-3 sm:col-span-3">
+
                                     <label for="niveau_jaar4" class="block text-sm font-medium text-gray-700">Niveau-eis einde jaar 4</label>
                                     <select id="niveau_jaar4" name="niveau_jaar4" class=" mt-1 block w-full py-2 px-3 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-1.5 px-3 border-2  @error('niveau_jaar4') border-red-500 @enderror">
                                         <option value="level1" selected="selected">1</option>
@@ -213,6 +217,7 @@
                                     </div>
                                     @enderror
                                 </div>
+
 
                             </div>
                         </div>
@@ -309,16 +314,23 @@
                     }
                 </style>
 
-
-
             </div>
-
-
-
         </div>
     </div>
 
     <script>
+        {{--niveau dropdown--}}
+
+        $(function() {
+            $('#study_type').change(function(){
+                    $('.bachelor').hide();
+                    $('.assdeg').hide();
+                    $('.' + $(this).val()).show();
+                });
+            });
+
+        {{--tabs--}}
+
         const tabs = document.querySelectorAll('[data-tab-target]');
         const tabContents = document.querySelectorAll('[data-tab-content]');
 
