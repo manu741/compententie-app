@@ -210,7 +210,7 @@
         </div>
         <div class="py-4">
             <div class="flex justify-center">
-                <a href="" class="w-4/12 flex justify-center border border-transparent text-base font-medium rounded-md text-white bg-blue-500 dark:bg-green-500 dark:hover:bg-green-600 hover:bg-blue-700 px-3 py-2">
+                <a href="" class="w-2/12 flex justify-center border border-transparent text-base font-medium rounded-md text-white bg-blue-500 dark:bg-green-500 dark:hover:bg-green-600 hover:bg-blue-700 px-3 py-2">
                     Opslaan
                 </a>
             </div>
