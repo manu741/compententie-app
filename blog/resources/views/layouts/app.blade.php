@@ -21,7 +21,7 @@
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <a href="{{route('home')}}"> <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"></a>
+                            <a href="{{route('home')}}"> <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg" alt="Workflow"></a>
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
@@ -55,7 +55,7 @@
 
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Instellingen</a>
 
-                                        <form action="{{ route('logout') }}" method="post" class="inline">
+                                        <form action="{{ route('logout') }}" method="get" class="inline">
                                             @csrf
                                             <button type="submit" class="text-left block w-full mr-0 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" role="menuitem">
                                                 Uitloggen
