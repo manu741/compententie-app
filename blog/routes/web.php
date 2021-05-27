@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\studentscontroller;
 
 Route::get('/', function () {
     return view('home');
@@ -37,4 +38,6 @@ Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->na
 
 Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 Route::post('/settings', [SettingsController::class, 'profile'])->name('profile');
+
+Route::get('/students', [studentscontroller::class, 'index'])->name('students');
 

@@ -11,7 +11,7 @@
             <div class="bg-white p-6 rounded-lg">
                 @if ($posts->count())
                     @foreach ($posts as $post)
-                        <x-post :post="$post" />
+                        <x-post :post="$post"></x-post>
                     @endforeach
 
                     {{ $posts->links() }}
