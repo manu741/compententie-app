@@ -213,27 +213,27 @@
             <div class="bg-gray-100 dark:bg-gray-700 w-8/12 rounded p-8">
                 <span>Preview reflectie (klik 'Details' om te wijzigen)</span>
 
-                     <div class="w-full my-4">
-                        <label>Situatie
-                            <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
-                        </label>
-                     </div>
+                <div class="w-full my-4">
+                    <label>Situatie
+                        <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
+                    </label>
+                </div>
 
-                    <div class="w-full my-4">
-                        <label>Taak
-                            <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
-                        </label>
-                     </div>
-                    <div class="w-full my-4">
-                        <label>Actie
-                            <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
-                        </label>
-                     </div>
-                    <div class="w-full my-4">
-                        <label>Resultaat
-                            <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
-                        </label>
-                     </div>
+                <div class="w-full my-4">
+                    <label>Taak
+                        <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
+                    </label>
+                </div>
+                <div class="w-full my-4">
+                    <label>Actie
+                        <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
+                    </label>
+                </div>
+                <div class="w-full my-4">
+                    <label>Resultaat
+                        <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
+                    </label>
+                </div>
 
             </div>
         </div>
