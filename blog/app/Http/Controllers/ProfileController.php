@@ -7,11 +7,11 @@ use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class SettingsController extends Controller
+class ProfileController extends Controller
 {
     public function index()
     {
-        return view('settings');
+        return view('profile');
     }
 
     public function profile(Request $request) {
@@ -44,7 +44,6 @@ class SettingsController extends Controller
         }
 
         $user->save();
-        return redirect()->route('settings');
+        return redirect()->route('profile');
     }
-
 }

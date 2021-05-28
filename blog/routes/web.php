@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
@@ -36,8 +36,9 @@ Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.
 Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
 Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');
 
-Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
-Route::post('/settings', [SettingsController::class, 'profile'])->name('profile');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::post('/profile', [ProfileController::class, 'profile'])->name('profile.update');
 
 Route::get('/students', [studentscontroller::class, 'index'])->name('students');
+Route::get('students/{user}', [studentscontroller::class, 'student'])->name('students.student');
 
