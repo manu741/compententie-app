@@ -185,6 +185,11 @@
                                         </td>
                                     </tbody>
                                 </table>
+                                <div>
+                                    <button class="w-2/12 h-10 rounded-md flex items-center justify-center px-8 py-3 mt-2 mb-2 border border-transparent text-base font-medium text-blue-500 border-blue-500 dark:bg-gray-700 dark:text-green-400 dark:border-green-400 md:py-4 md:text-lg md:px-10">
+                                        Details
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
