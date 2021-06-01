@@ -12,8 +12,5 @@
         <div class="flex mx-2">
             <a href="{{route('midterm')}}" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mid-term Review</a>
         </div>
-        <div class="flex mx-2">
-            <a href="{{route('reflectie')}}" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Zelfreflectie</a>
-        </div>
     </div>
 </div>
