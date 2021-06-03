@@ -185,6 +185,11 @@
                                         </td>
                                     </tbody>
                                 </table>
+                                <div class="flex mt-4 mb-4 ml-12">
+                                    <a href="" class="w-2/12 flex items-center justify-center px-8 py-3 mr-10 mt-2 mb-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-green-600 md:py-4 md:text-lg md:px-10">
+                                        Details
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

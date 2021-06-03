@@ -30,4 +30,5 @@ class popcontroller extends Controller
     {
         return view('users.midterm');
     }
+
 }

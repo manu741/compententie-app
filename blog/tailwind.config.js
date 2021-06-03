@@ -1,10 +1,9 @@
 module.exports = {
   purge: [],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     fontFamily: {
         'mulish': ['Mulish', defaultTheme.fontFamily.sans-serif],
-
     }
   },
   variants: {
