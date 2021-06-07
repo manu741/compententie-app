@@ -17,7 +17,7 @@ class CreatePopcompetentieTable extends Migration
             $table->id();
             $table->foreignId('popcyclusdatum_id')->constrained()->references('id')->on('popcyclusdatum')->onDelete('cascade');
             $table->foreignId('opleiding_id')->constrained()->references('id')->on('opleiding')->onDelete('cascade');
-            $table->foreignId('student_id')->constrained()->references('id')->on('student')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('competentie_id')->constrained()->references('id')->on('competentie')->onDelete('cascade');
             $table->boolean('communiceren');
             $table->boolean('samenwerken');

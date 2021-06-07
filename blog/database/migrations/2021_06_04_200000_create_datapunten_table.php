@@ -19,7 +19,7 @@ class CreateDatapuntenTable extends Migration
             $table->foreignId('opdrachtgever_id')->constrained()->references('id')->on('opdrachtgever')->onDelete('cascade');
             $table->foreignId('beroepsproduct_id')->constrained()->references('id')->on('beroepsproduct')->onDelete('cascade');
             $table->foreignId('competentie_id')->constrained()->references('id')->on('competentie')->onDelete('cascade');
-            $table->foreignId('assesor_id')->constrained()->references('id')->on('assessor')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->references('id')->on('users')->onDelete('cascade');
             $table->boolean('bevroren');
             $table->text('onderbouwing');
             $table->text('feedback');
