@@ -13,9 +13,10 @@ class DashboardController extends Controller
     {
         $this->middleware(['auth']);
     }
-    
+
     public function index()
     {
+        $reflecties =
         return view('dashboard');
     }
 }

@@ -15,6 +15,7 @@ class CreateMidtermreviewTable extends Migration
     {
         Schema::create('midtermreview', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('pop_id')->constrained()->references('id')->on('pop')->onDelete('cascade');
             $table->string('toelichting');
             $table->enum('rating', ['good', 'neutral', 'bad']);
         });

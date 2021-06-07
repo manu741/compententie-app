@@ -15,7 +15,7 @@ class CreatePopcyclusdatumTable extends Migration
     {
         Schema::create('popcyclusdatum', function (Blueprint $table) {
             $table->id();
-            $table->date('cyclus');
+            $table->char('cyclus');
             $table->string('cyclusvolgorde');
             $table->boolean('eerstecyclus');
             $table->date('begin');

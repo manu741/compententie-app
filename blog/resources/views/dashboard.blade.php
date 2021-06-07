@@ -86,9 +86,7 @@
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
                                             Gemaakt door:
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
-                                            Vak:
-                                        </th>
+
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
                                             Datum ingevuld:
                                         </th>
@@ -109,9 +107,6 @@
                                             <a href="" class="text-sm text-gray-900 dark:text-white">Student A</a>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap ">
-                                            <a href="" class="text-sm text-gray-900 dark:text-white">UX</a>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap ">
                                             <a href="" class="text-sm text-gray-900 dark:text-white">21/02/2021</a>
                                         </td>
                                     <tr>
@@ -126,9 +121,6 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap ">
                                             <a href="" class="text-sm text-gray-900 dark:text-white">Student A</a>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap ">
-                                            <a href="" class="text-sm text-gray-900 dark:text-white">Agile</a>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap ">
                                             <a href="" class="text-sm text-gray-900 dark:text-white">28/05/2021</a>
@@ -147,9 +139,6 @@
                                             <a href="" class="text-sm text-gray-900 dark:text-white">Student A</a>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap ">
-                                            <a href="" class="text-sm text-gray-900 dark:text-white">Software</a>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap ">
                                             <a href="" class="text-sm text-gray-900 dark:text-white">11/09/2020</a>
                                         </td>
                                     </tbody>
@@ -160,6 +149,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 @endsection
