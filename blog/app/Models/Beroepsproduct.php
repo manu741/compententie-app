@@ -6,18 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
- * @property string $afkorting
- * @property string $naam
- * @property Opleiding[] $opleidings
+ * @property string $beroepsproduct
+ * @property string $beschrijving
+ * @property Datapunten[] $datapuntens
  */
-class Instituut extends Model
+class Beroepsproduct extends Model
 {
     /**
      * The table associated with the model.
      * 
      * @var string
      */
-    protected $table = 'instituut';
+    protected $table = 'beroepsproduct';
 
     /**
      * The "type" of the auto-incrementing ID.
@@ -29,13 +29,13 @@ class Instituut extends Model
     /**
      * @var array
      */
-    protected $fillable = ['afkorting', 'naam'];
+    protected $fillable = ['beroepsproduct', 'beschrijving'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function opleidings()
+    public function datapuntens()
     {
-        return $this->hasMany('App\Opleiding');
+        return $this->hasMany('App\Datapunten');
     }
 }

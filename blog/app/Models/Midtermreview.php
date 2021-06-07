@@ -7,26 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property integer $id
  * @property integer $pop_id
- * @property string $soort
- * @property string $methode
- * @property string $naam
- * @property string $situatie
- * @property string $taak
- * @property string $actie
- * @property string $resultaat
- * @property string $reflectie
- * @property string $created_at
- * @property string $updated_at
+ * @property string $toelichting
+ * @property string $rating
  * @property Pop $pop
  */
-class Popreflectie extends Model
+class Midtermreview extends Model
 {
     /**
      * The table associated with the model.
      * 
      * @var string
      */
-    protected $table = 'popreflectie';
+    protected $table = 'midtermreview';
 
     /**
      * The "type" of the auto-incrementing ID.
@@ -38,7 +30,7 @@ class Popreflectie extends Model
     /**
      * @var array
      */
-    protected $fillable = ['pop_id', 'soort', 'methode', 'naam', 'situatie', 'taak', 'actie', 'resultaat', 'reflectie', 'created_at', 'updated_at'];
+    protected $fillable = ['pop_id', 'toelichting', 'rating'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
