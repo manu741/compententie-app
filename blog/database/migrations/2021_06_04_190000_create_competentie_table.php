@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCompetentiesTable extends Migration
+class CreateCompetentieTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateCompetentiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('competenties', function (Blueprint $table) {
-
+        Schema::create('competentie', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('nulsituatie_id')->constrained()->references('id')->on('nulsituatie')->onDelete('cascade');
             $table->string('competentie');
-            $table->timestamps();
+            $table->enum('type', ['generiek', 'vakinhoudelijk']);
+            $table->boolean('eindkwalificatie');
 
         });
     }
@@ -29,6 +30,6 @@ class CreateCompetentiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('competenties');
+        Schema::dropIfExists('competentie');
     }
 }
