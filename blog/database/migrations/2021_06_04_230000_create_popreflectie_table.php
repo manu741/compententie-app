@@ -15,14 +15,16 @@ class CreatePopreflectieTable extends Migration
     {
         Schema::create('popreflectie', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('popcyclusdatum_id')->constrained()->references('id')->on('popcyclusdatum')->onDelete('cascade');
+            $table->foreignId('pop_id')->constrained()->references('id')->on('pop')->onDelete('cascade');
             $table->enum('soort', ['aantonen', 'competentie', 'zelfreflectie']);
             $table->enum('methode', ['starr', 'korthagen']);
+            $table->char('naam')->nullable();
             $table->longText('situatie');
             $table->longText('taak');
             $table->longText('actie');
             $table->longText('resultaat');
             $table->longText('reflectie');
+            $table->timestamps();
         });
     }
 

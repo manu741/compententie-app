@@ -16,7 +16,6 @@ class CreatePopTable extends Migration
         Schema::create('pop', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->references('id')->on('users')->onDelete('cascade');
-            $table->foreignId('datapunten_id')->constrained()->references('id')->on('datapunten')->onDelete('cascade');
             $table->foreignId('midtermreview_id')->constrained()->references('id')->on('midtermreview')->onDelete('cascade');
             $table->foreignId('popcyclusdatum_id')->constrained()->references('id')->on('popcyclusdatum')->onDelete('cascade');
             $table->string('popnaam');
