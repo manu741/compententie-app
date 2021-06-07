@@ -88,7 +88,7 @@
             <div class="bg-gray-100 dark:bg-gray-700 w-8/12 rounded mb-4">
 
                 <div class="flex flex-col ml-12 mr-12">
-                    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="p-4 my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                             <div class="overflow-hidden sm:rounded-lg">
                                 <span class="flex mb-8 mt-8">
@@ -185,11 +185,13 @@
                                         </td>
                                     </tbody>
                                 </table>
-                                <div class="flex mt-4 mb-4 ml-12">
-                                    <a href="" class="w-2/12 flex items-center justify-center px-8 py-3 mr-10 mt-2 mb-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-green-600 md:py-4 md:text-lg md:px-10">
+
+                                <div x-data="{ showModal1: false, showModal2: false, showModal3: false }" :class="{'overflow-y-hidden': showModal1 || showModal2 || showModal3}" x-cloak>
+                                    <button class="bg-blue-500 dark:bg-green-500 font-semibold text-white px-8 h-10 w-32 rounded hover:bg-blue-600 dark:hover:bg-green-600 focus:outline-none mt-2" @click="showModal1 = true">
                                         Details
-                                    </a>
-                                </div>
+                                    </button>
+                                    <!-- Modal Reflecties -->
+                                    <x-popupDatapunt/>
                             </div>
                         </div>
                     </div>

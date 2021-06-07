@@ -63,7 +63,7 @@
             </div>
         </div>
 
-        <div class="flex justify-center my-8">
+        <div class="flex justify-center">
             <div class="bg-gray-100 dark:bg-gray-700 w-8/12 rounded p-8">
 
                 <div class="flex flex-col ml-12 mr-12">
