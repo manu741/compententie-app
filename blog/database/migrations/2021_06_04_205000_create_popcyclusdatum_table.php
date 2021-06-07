@@ -15,7 +15,6 @@ class CreatePopcyclusdatumTable extends Migration
     {
         Schema::create('popcyclusdatum', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('pop_id')->constrained()->references('id')->on('pop')->onDelete('cascade');
             $table->date('cyclus');
             $table->string('cyclusvolgorde');
             $table->boolean('eerstecyclus');

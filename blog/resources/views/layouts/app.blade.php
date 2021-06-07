@@ -28,6 +28,9 @@
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <a href="{{route('home')}}" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
                                 @auth
+                                    <a href="{{route('dashboard')}}" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
+                                @endauth
+                                @auth
                                         <a href="{{route('popHome')}}" class="dark:text-gray-300 dark:hover:bg-gray-600 hover:bg-gray-200 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">POP</a>
                                 @endauth
                                 @auth
