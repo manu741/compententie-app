@@ -48,7 +48,7 @@
                     @enderror
                 </div>
 
-                <p class="text-black dark:text-white text-center font-bold mb-4">Studenten Nummer:</p>
+                <p class="text-black dark:text-white text-center font-bold mb-4">Student Nummer:</p>
                 <div class="mb-4 w-full text-center">
                     <label for="studentnr" class="sr-only">Studentnr</label>
                     <input type="text" name="studentnr" id="studentnr" placeholder="1234567" class="dark:bg-gray-500 bg-gray-100 dark:border-gray-400 shadow w-4/12 border-2 p-4 focus:outline-none @error('studentnr') border-red-500 @enderror" value="{{ old('studentnr') }}">

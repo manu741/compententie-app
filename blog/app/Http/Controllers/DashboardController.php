@@ -16,7 +16,6 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $reflecties =
         return view('dashboard');
     }
 }
