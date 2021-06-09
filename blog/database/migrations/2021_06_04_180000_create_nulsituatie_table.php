@@ -16,6 +16,7 @@ class CreateNulsituatieTable extends Migration
         Schema::create('nulsituatie', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('competentie_id')->constrained()->references('id')->on('competentie')->onDelete('cascade');
             $table->enum('niveau', ['1', '2', '3', '4', '5']);
             $table->integer('cijfer');
             $table->text('motivatie');

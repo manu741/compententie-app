@@ -15,7 +15,6 @@ class CreateCompetentieTable extends Migration
     {
         Schema::create('competentie', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('nulsituatie_id')->constrained()->references('id')->on('nulsituatie')->onDelete('cascade');
             $table->string('competentie');
             $table->enum('type', ['generiek', 'vakinhoudelijk']);
             $table->boolean('eindkwalificatie');

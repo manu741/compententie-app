@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="flex justify-center ">
+        <div class="flex justify-center S">
             <div class="bg-gray-100 dark:bg-gray-700 w-8/12 p-8">
 
                 <div class="w-full my-2">
