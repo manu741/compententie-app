@@ -1,17 +1,17 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 /**
  * @property integer $id
- * @property integer $nulsituatie_id
  * @property string $competentie
  * @property string $type
  * @property boolean $eindkwalificatie
- * @property Nulsituatie $nulsituatie
  * @property Datapunten[] $datapuntens
+ * @property Nulsituatie[] $nulsituaties
  * @property Popcompetentie[] $popcompetenties
  * @property Indicatoren[] $indicatorens
  */
@@ -34,15 +34,7 @@ class Competentie extends Model
     /**
      * @var array
      */
-    protected $fillable = ['nulsituatie_id', 'competentie', 'type', 'eindkwalificatie'];
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function nulsituatie()
-    {
-        return $this->belongsTo('App\Nulsituatie');
-    }
+    protected $fillable = ['competentie', 'type', 'eindkwalificatie'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -50,6 +42,14 @@ class Competentie extends Model
     public function datapuntens()
     {
         return $this->hasMany('App\Datapunten');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function nulsituaties()
+    {
+        return $this->hasMany('App\Nulsituatie');
     }
 
     /**

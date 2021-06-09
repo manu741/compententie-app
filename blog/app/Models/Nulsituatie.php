@@ -1,18 +1,19 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
  * @property integer $user_id
+ * @property integer $competentie_id
  * @property string $niveau
  * @property int $cijfer
  * @property string $motivatie
  * @property string $compliment
  * @property User $user
- * @property Competentie[] $competenties
+ * @property Competentie $competentie
  */
 class Nulsituatie extends Model
 {
@@ -33,7 +34,7 @@ class Nulsituatie extends Model
     /**
      * @var array
      */
-    protected $fillable = ['user_id', 'niveau', 'cijfer', 'motivatie', 'compliment'];
+    protected $fillable = ['user_id', 'competentie_id', 'niveau', 'cijfer', 'motivatie', 'compliment'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -44,10 +45,12 @@ class Nulsituatie extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function competenties()
+    public function competentie()
     {
-        return $this->hasMany('App\Competentie');
+        return $this->belongsTo('App\Competentie');
     }
+
+
 }
