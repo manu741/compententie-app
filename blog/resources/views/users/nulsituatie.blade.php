@@ -29,9 +29,9 @@
 
         <div class="flex justify-center S">
             <div class="bg-gray-100 dark:bg-gray-700 w-8/12 p-8">
-
+                <label class=" my-2">Competenties</label> 
                 <div class="w-full my-2">
-                    <label class=" my-2">Competenties
+                    
                         
                         <div class="my-2 relative inline-flex ml-8">
                             <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none"
@@ -46,18 +46,14 @@
 
 
                                 <option selected="selected" value="nulsituatie_id">Select One</option>
-                               
-
+                            
 
                                 @foreach ($nulsituaties as $nulsituatie)
-
 
                                     <option value="{{ $nulsituatie->id }}" data-price4="{{ $nulsituatie->compliment }}"
                                         data-price3="{{ $nulsituatie->cijfer }}" data-price2="{{ $nulsituatie->niveau }}"
                                         data-price="{{ $nulsituatie->motivatie }}">{{ $nulsituatie->competentie }}</option>
-
-
-                                @endforeach
+                                     @endforeach
 
                             </select>
                         </div>
@@ -74,8 +70,15 @@
 
                 <div class="w-full my-2">
                         <label class="my-2">Indicatoren (3 labels hieronder)
-                            <input disabled type='text' placeholder="Indicator komt hier te staan" class="w-full bg-white my-2 px-6 py-3 border text-md text-gray-700 focus:outline-none dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"/>
-                        </label>
+                            <br>
+                            <select name="Cars" size="3">  
+                                @foreach ($indicatoren as $indicator)
+                                    <option value="indicator"> {{$indicator->indicator}} </option>   
+                                @endforeach
+                                
+                                
+                            </select>  
+                            </label>
                 </div>
 
                 <div class="w-full my-2">
@@ -98,7 +101,7 @@
                             </svg>
 
                         </div> <br>
-                        <textarea id="niveauName" placeholder="{{ $nulsituatie->niveau }}" readonly
+                        <textarea id="niveauName" placeholder="" readonly
                             class="border text-md text-gray-700 focus:outline-none  dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
 
 
@@ -116,7 +119,7 @@
                                     fill="#648299" fill-rule="nonzero" />
                             </svg>
                         </div> <br>
-                        <textarea id="cijferName" placeholder="{{ $nulsituatie->cijfer }}"
+                        <textarea id="cijferName" placeholder=""
                             class="border text-md text-gray-700 focus:outline-none  dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
 
 
@@ -131,7 +134,7 @@
                     </label>
                 </div>
 
-                <textarea id="complimentName" placeholder="{{ $nulsituatie->compliment }}"
+                <textarea id="complimentName" placeholder=""
                     class="border text-md text-gray-700 focus:outline-none  dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
 
 
