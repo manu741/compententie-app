@@ -2,26 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef68f442-fc88-429a-8765-e27a9917b1ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compententie-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compententie-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Models/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_215000_create_datapunten_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_215000_create_datapunten_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php" afterDir="false" />
+    </list>
+    <list id="22ea55c7-0e71-44a9-a498-65fef81b0a29" name="Changes by nkhui" comment="">
+      <change beforePath="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/blog/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php">
+      <ranges>
+        <range start1="73" end1="74" start2="73" end2="74" changelist="ef68f442-fc88-429a-8765-e27a9917b1ae" />
+        <range start1="80" end1="81" start2="80" end2="81" changelist="ef68f442-fc88-429a-8765-e27a9917b1ae" />
+        <range start1="83" end1="84" start2="83" end2="84" changelist="ef68f442-fc88-429a-8765-e27a9917b1ae" />
+        <range start1="94" end1="101" start2="94" end2="104" changelist="22ea55c7-0e71-44a9-a498-65fef81b0a29" />
+        <range start1="102" end1="144" start2="105" end2="126" changelist="22ea55c7-0e71-44a9-a498-65fef81b0a29" />
+      </ranges>
+    </file>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -145,6 +156,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -157,6 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1623161216657</updated>
       <workItem from="1623161220783" duration="875000" />
+      <workItem from="1623233903680" duration="10793000" />
     </task>
     <servers />
   </component>
@@ -173,5 +186,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
