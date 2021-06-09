@@ -21,12 +21,13 @@ class CreateDatapuntenTable extends Migration
             $table->foreignId('competentie_id')->constrained()->references('id')->on('competentie')->onDelete('cascade');
             $table->foreignId('user_id')->constrained()->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('pop_id')->constrained()->references('id')->on('pop')->onDelete('cascade');
+            $table->char('naam');
             $table->boolean('bevroren');
             $table->text('onderbouwing');
             $table->text('feedback');
             $table->text('feedup');
             $table->text('feedforward');
-            $table->binary('bijlage');
+            $table->binary('bijlage')->nullable();
             $table->timestamps();
 
         });
