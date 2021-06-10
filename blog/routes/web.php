@@ -36,9 +36,10 @@ Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('
 Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');
 
 Route::get('/pop', [popcontroller::class, 'popHome'])->name('popHome');
-Route::get('/pop/nulsituatie', [NulsituatieController::class, 'nulSituatie'])->name('nulsituatie');
 Route::get('/pop/afspraken', [popcontroller::class, 'afspraken'])->name('afspraken');
 Route::get('/pop/datapunt', [popcontroller::class, 'datapunt'])->name('datapunt');
 Route::get('/pop/midterm', [popcontroller::class, 'midterm'])->name('midterm');
 Route::get('/pop/reflectie', [popcontroller::class, 'reflectie'])->name('reflectie');
 
+Route::get('/pop/nulsituatie', [NulsituatieController::class, 'nulSituatie'])->name('nulsituatie');
+Route::post('/', [NulsituatieController::class, 'update'])->name('nulsituatie.edit');

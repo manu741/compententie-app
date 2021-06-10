@@ -25,26 +25,40 @@ class NulsituatieController extends Controller
         return view('competentie.index', [
             'competenties' => $competenties,
         ]);
-
     }
+
+
 
     public function nulSituatie()
     {
-        
-
         $indicatoren = Indicatoren::all();
-        
-        
-
 
         $nulsituaties = Nulsituatie::join('competentie', 'competentie.id', '=', 'nulsituatie.competentie_id')
-        ->join('users', 'users.id', '=', 'nulsituatie.user_id')
-        ->where('nulsituatie.user_id', auth()->User()->id)
-        ->get();
-
+            ->join('users', 'users.id', '=', 'nulsituatie.user_id')
+            ->where('nulsituatie.user_id', auth()->User()->id)
+            ->get();
 
         return view('users.nulsituatie', ['nulsituaties' => $nulsituaties], ['indicatoren' => $indicatoren]);
     }
+
+    public function update(Request $request)
+    {
+        $data = Nulsituatie::find($request->id);
+
+        
+      
+        $data->niveau = $request->niveau;
+        $data->cijfer = $request->cijfer;
+        $data->motivatie = $request->toelichting;
+
+        
+
+        $data->save();
+
+        dd($request->request);
+        return redirect()->back()->with('message', 'De nulsituatie is aangepast', ['data' => $data]);
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -96,10 +110,7 @@ class NulsituatieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+
 
     /**
      * Remove the specified resource from storage.

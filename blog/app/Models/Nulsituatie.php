@@ -17,6 +17,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Nulsituatie extends Model
 {
+
+
+    public $timestamps = false;
+
     /**
      * The table associated with the model.
      * 
@@ -51,6 +55,5 @@ class Nulsituatie extends Model
     {
         return $this->belongsTo('App\Competentie');
     }
-
 
 }
