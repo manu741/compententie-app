@@ -55,7 +55,7 @@ class NulsituatieController extends Controller
 
         $data->save();
 
-        dd($request->request);
+       
         return redirect()->back()->with('message', 'De nulsituatie is aangepast', ['data' => $data]);
     }
 

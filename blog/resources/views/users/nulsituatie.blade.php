@@ -58,7 +58,7 @@
                                 
 
                                 
-                                    <option value="{{ $nulsituatie->id }}" data-price4="{{ $nulsituatie->compliment }}" data-price5="{{ $nulsituatie->id }}"
+                                    <option value="{{ $nulsituatie->id }}" data-price4="{{ $nulsituatie->compliment }}" data-price5="{{ $nulsituatie->competentie_id }}"
                                         data-price3="{{ $nulsituatie->cijfer }}" data-price2="{{ $nulsituatie->niveau }}"
                                         data-price="{{ $nulsituatie->motivatie }}">{{ $nulsituatie->competentie }}</option>
                                      @endforeach
@@ -95,7 +95,7 @@
 
                 <form action="{{ route('nulsituatie.edit') }}" method="post">
                     @csrf
-                    <label for="id">
+                   
 
 
 
@@ -104,8 +104,8 @@
 
 
                         
-                    <textarea readonly id="id" name="id" value="id" ></textarea>
-                    </label>
+                    <input type="text" hidden  id="id" name="id"></>
+                    
                 <div class="w-full my-2">
                     <label>Toelichting
 
