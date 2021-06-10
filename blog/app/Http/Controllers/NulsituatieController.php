@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Competentie;
 use App\Models\Nulsituatie;
+use App\Models\Indicatoren;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Collection;
+
 
 class NulsituatieController extends Controller
 {
@@ -22,6 +26,24 @@ class NulsituatieController extends Controller
             'competenties' => $competenties,
         ]);
 
+    }
+
+    public function nulSituatie()
+    {
+        
+
+        $indicatoren = Indicatoren::all();
+        
+        
+
+
+        $nulsituaties = Nulsituatie::join('competentie', 'competentie.id', '=', 'nulsituatie.competentie_id')
+        ->join('users', 'users.id', '=', 'nulsituatie.user_id')
+        ->where('nulsituatie.user_id', auth()->User()->id)
+        ->get();
+
+
+        return view('users.nulsituatie', ['nulsituaties' => $nulsituaties], ['indicatoren' => $indicatoren]);
     }
 
     /**

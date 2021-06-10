@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Competentie;
 use App\Models\Indicatoren;
+use App\Models\Nulsituatie;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Collection;
-use App\Models\Nulsituatie;
 
 class popcontroller extends Controller
 {
@@ -16,23 +17,7 @@ class popcontroller extends Controller
     {
         return view('users.pop');
     }
-    public function nulSituatie()
-    {
-        
-
-        $indicatoren = Indicatoren::all();
-        
-        
-
-
-        $nulsituaties = Nulsituatie::join('competentie', 'competentie.id', '=', 'nulsituatie.competentie_id')
-        ->join('users', 'users.id', '=', 'nulsituatie.user_id')
-        ->where('nulsituatie.user_id', auth()->User()->id)
-        ->get();
-
-
-        return view('users.nulsituatie', ['nulsituaties' => $nulsituaties], ['indicatoren' => $indicatoren]);
-    }
+    
 
     public function reflectie()
     {
