@@ -46,4 +46,6 @@ Route::get('/pop/nulsituatie', [NulsituatieController::class, 'nulSituatie'])->n
 Route::post('/', [NulsituatieController::class, 'update'])->name('nulsituatie.edit');
 
 Route::get('/pop/datapunt', [datapuntController::class, 'index'])->name('datapunt');
+Route::post('/pop/datapunt/save', [datapuntController::class, 'emptyDatapunt'])->name('emptyDatapunt');
 Route::get('/pop/GetNiveausAgainstCompetentieDrop/{id}', [datapuntController::class, 'GetNiveausAgainstCompetentieDrop'])->name('loadNiveauData');
+Route::get('/pop/GetIndicatorAgainstNiveau/{pop}', [datapuntController::class, 'GetIndicatorAgainstNiveau'])->name('loadIndicator');

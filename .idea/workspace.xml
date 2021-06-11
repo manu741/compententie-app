@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef68f442-fc88-429a-8765-e27a9917b1ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compententie-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compententie-app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/popcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/popcontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Models/Competentie.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Competentie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Models/Indicatoren.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Indicatoren.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/datapuntController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/datapuntController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/resources/views/users/datapunt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/users/datapunt.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routes/web.php" afterDir="false" />
     </list>
@@ -160,7 +157,7 @@
       <workItem from="1623161220783" duration="875000" />
       <workItem from="1623233903680" duration="10793000" />
       <workItem from="1623315673759" duration="23198000" />
-      <workItem from="1623401681014" duration="1618000" />
+      <workItem from="1623401681014" duration="6726000" />
     </task>
     <servers />
   </component>
