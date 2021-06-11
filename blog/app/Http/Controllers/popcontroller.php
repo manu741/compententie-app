@@ -17,7 +17,7 @@ class popcontroller extends Controller
     {
         return view('users.pop');
     }
-    
+
 
     public function reflectie()
     {
@@ -26,10 +26,6 @@ class popcontroller extends Controller
     public function afspraken()
     {
         return view('users.afspraken');
-    }
-    public function datapunt()
-    {
-        return view('users.datapunt');
     }
     public function midterm()
     {

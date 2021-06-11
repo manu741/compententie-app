@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef68f442-fc88-429a-8765-e27a9917b1ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compententie-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compententie-app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_215000_create_datapunten_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_215000_create_datapunten_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/popcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/popcontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Models/Competentie.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Competentie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Models/Indicatoren.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Indicatoren.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/resources/views/users/datapunt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/users/datapunt.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routes/web.php" afterDir="false" />
     </list>
-    <list id="22ea55c7-0e71-44a9-a498-65fef81b0a29" name="Changes by nkhui" comment="">
-      <change beforePath="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php" afterDir="false" />
-    </list>
+    <list id="22ea55c7-0e71-44a9-a498-65fef81b0a29" name="Changes by nkhui" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,17 +22,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/blog/resources/views/dashboard.blade.php">
-      <ranges>
-        <range start1="73" end1="74" start2="73" end2="74" changelist="ef68f442-fc88-429a-8765-e27a9917b1ae" />
-        <range start1="80" end1="81" start2="80" end2="81" changelist="ef68f442-fc88-429a-8765-e27a9917b1ae" />
-        <range start1="83" end1="84" start2="83" end2="84" changelist="ef68f442-fc88-429a-8765-e27a9917b1ae" />
-        <range start1="94" end1="101" start2="94" end2="104" changelist="22ea55c7-0e71-44a9-a498-65fef81b0a29" />
-        <range start1="102" end1="144" start2="105" end2="126" changelist="22ea55c7-0e71-44a9-a498-65fef81b0a29" />
-      </ranges>
-    </file>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -170,6 +159,8 @@
       <updated>1623161216657</updated>
       <workItem from="1623161220783" duration="875000" />
       <workItem from="1623233903680" duration="10793000" />
+      <workItem from="1623315673759" duration="23198000" />
+      <workItem from="1623401681014" duration="1618000" />
     </task>
     <servers />
   </component>

@@ -17,14 +17,14 @@ class Indicatoren extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'indicatoren';
 
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -47,6 +47,6 @@ class Indicatoren extends Model
      */
     public function competentie()
     {
-        return $this->belongsTo('App\Competentie');
+        return $this->belongsTo(Competentie::class);
     }
 }

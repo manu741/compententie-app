@@ -19,14 +19,14 @@ class Competentie extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'competentie';
 
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -63,8 +63,8 @@ class Competentie extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function indicatorens()
+    public function indicatoren()
     {
-        return $this->hasMany('App\Indicatoren');
+        return $this->hasMany(Indicatoren::class);
     }
 }

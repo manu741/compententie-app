@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\datapuntController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
@@ -37,9 +38,12 @@ Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->na
 
 Route::get('/pop', [popcontroller::class, 'popHome'])->name('popHome');
 Route::get('/pop/afspraken', [popcontroller::class, 'afspraken'])->name('afspraken');
-Route::get('/pop/datapunt', [popcontroller::class, 'datapunt'])->name('datapunt');
+
 Route::get('/pop/midterm', [popcontroller::class, 'midterm'])->name('midterm');
 Route::get('/pop/reflectie', [popcontroller::class, 'reflectie'])->name('reflectie');
 
 Route::get('/pop/nulsituatie', [NulsituatieController::class, 'nulSituatie'])->name('nulsituatie');
 Route::post('/', [NulsituatieController::class, 'update'])->name('nulsituatie.edit');
+
+Route::get('/pop/datapunt', [datapuntController::class, 'index'])->name('datapunt');
+Route::get('/pop/GetNiveausAgainstCompetentieDrop/{id}', [datapuntController::class, 'GetNiveausAgainstCompetentieDrop'])->name('loadNiveauData');
