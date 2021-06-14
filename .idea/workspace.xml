@@ -4,8 +4,10 @@
     <list default="true" id="ef68f442-fc88-429a-8765-e27a9917b1ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/datapuntController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/datapuntController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Models/Competentie.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Competentie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Models/Indicatoren.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Indicatoren.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/resources/views/users/datapunt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/users/datapunt.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routes/web.php" afterDir="false" />
     </list>
     <list id="22ea55c7-0e71-44a9-a498-65fef81b0a29" name="Changes by nkhui" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +21,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -155,9 +165,8 @@
       <option name="presentableId" value="Default" />
       <updated>1623161216657</updated>
       <workItem from="1623161220783" duration="875000" />
-      <workItem from="1623233903680" duration="10793000" />
-      <workItem from="1623315673759" duration="23198000" />
-      <workItem from="1623401681014" duration="6726000" />
+      <workItem from="1623233903680" duration="10996000" />
+      <workItem from="1623662027224" duration="5412000" />
     </task>
     <servers />
   </component>

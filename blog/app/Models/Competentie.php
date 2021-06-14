@@ -39,14 +39,6 @@ class Competentie extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function datapuntens()
-    {
-        return $this->hasMany('App\Datapunten');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
     public function nulsituaties()
     {
         return $this->hasMany('App\Nulsituatie');

@@ -49,4 +49,10 @@ class Indicatoren extends Model
     {
         return $this->belongsTo(Competentie::class);
     }
+
+    public function datapuntens()
+    {
+        return $this->hasMany('App\Datapunten');
+    }
+
 }

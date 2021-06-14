@@ -47,7 +47,7 @@ class Datapunten extends Model
     /**
      * @var array
      */
-    protected $fillable = ['onderwijseenheid_id', 'opdrachtgever_id', 'beroepsproduct_id', 'competentie_id', 'user_id', 'pop_id', 'bevroren', 'onderbouwing', 'feedback', 'feedup', 'feedforward', 'bijlage', 'created_at', 'updated_at'];
+    protected $fillable = ['onderwijseenheid_id', 'opdrachtgever_id', 'beroepsproduct_id', 'indicator_id', 'user_id', 'pop_id', 'bevroren', 'naam', 'onderbouwing', 'feedback', 'feedup', 'feedforward', 'bijlage', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -76,9 +76,9 @@ class Datapunten extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function competentie()
+    public function indicatoren()
     {
-        return $this->belongsTo('App\Competentie');
+        return $this->belongsTo(Indicatoren::class);
     }
 
     /**
