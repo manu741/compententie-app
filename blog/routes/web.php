@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReflectieController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
@@ -12,8 +13,7 @@ use App\Http\Controllers\popcontroller;
 use App\Http\Controllers\NulsituatieController;
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('home');})->name('home');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
@@ -40,5 +40,6 @@ Route::get('/pop/nulsituatie', [NulsituatieController::class, 'nulSituatie'])->n
 Route::get('/pop/afspraken', [popcontroller::class, 'afspraken'])->name('afspraken');
 Route::get('/pop/datapunt', [popcontroller::class, 'datapunt'])->name('datapunt');
 Route::get('/pop/midterm', [popcontroller::class, 'midterm'])->name('midterm');
-Route::get('/pop/reflectie', [popcontroller::class, 'reflectie'])->name('reflectie');
 
+Route::get('/pop/reflectie', [ReflectieController::class, 'index'])->name('reflectie');
+Route::post('/pop/reflectie/save', [ReflectieController::class, 'store'])->name('popreflectie.store');
