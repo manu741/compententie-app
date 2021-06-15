@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef68f442-fc88-429a-8765-e27a9917b1ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_175000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_220000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_210000_create_pop_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_210000_create_pop_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_215000_create_datapunten_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_215000_create_datapunten_table.php" afterDir="false" />
     </list>
     <list id="22ea55c7-0e71-44a9-a498-65fef81b0a29" name="Changes by nkhui" comment="" />
@@ -165,7 +162,7 @@
       <workItem from="1623161220783" duration="875000" />
       <workItem from="1623233903680" duration="10996000" />
       <workItem from="1623662027224" duration="6367000" />
-      <workItem from="1623755818982" duration="21197000" />
+      <workItem from="1623755818982" duration="21706000" />
     </task>
     <servers />
   </component>
