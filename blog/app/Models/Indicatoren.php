@@ -45,14 +45,14 @@ class Indicatoren extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function competentie()
+    public function competenties()
     {
-        return $this->belongsTo(Competentie::class);
+        return $this->belongsTo(Competentie::class, 'competentie_id');
     }
 
     public function datapuntens()
     {
-        return $this->hasMany('App\Datapunten');
+        return $this->hasMany(Datapunten::class);
     }
 
 }

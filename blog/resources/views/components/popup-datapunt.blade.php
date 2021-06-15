@@ -11,26 +11,26 @@
                 <div class="p-4">
 
                     <div class=" bg-gray-100 dark:bg-gray-700 w-full rounded p-8">
-                            <div class="w-full">
-                                <label class=" my-2">Datapunt ID: </label>
-                                <div class="my-2 relative inline-flex ml-8">
-                                    <input disabled type='text' placeholder="7" class="w-full bg-white my-2 px-6 py-3 border text-md text-gray-700 focus:outline-none dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"/>
-                                </div>
-                            </div>
 
-                            <div class="w-full">
-                                <label class=" my-2">Aanmaak datum: </label>
-                                <div class="my-2 relative inline-flex ml-8">
-                                    <input disabled type='text' placeholder="03-6-2021" class="w-full bg-white my-2 px-6 py-3 border text-md text-gray-700 focus:outline-none dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"/>
-                                </div>
-                            </div>
-
-                            <div class="w-full">
-                                <label>Bevroren</label>
-                                <label class="inline-flex items-center mt-3"></label>
-                                <input type="checkbox" class="form-checkbox h-5 w-5 text-red-600 align-middle my-2 px-6 py-3" checked>
+                        <div class="w-full">
+                            <label class=" my-2">Aanmaak datum: </label>
+                            <div class="my-2 relative inline-flex ml-8">
+                                <span>
+                                    {{ $datapunt->created_at->format('d/m/Y') }}
+                                </span>
                             </div>
                         </div>
+
+                        <div class="w-full">
+                            <label>Bevroren: </label>
+                            <label class="inline-flex items-center mt-3"></label>
+                            @if ($datapunt->bevroren)
+                                <span class="text-sm text-gray-900 dark:text-white ml-4">Ja</span>
+                            @else
+                                <span class="text-sm text-gray-900 dark:text-white ml-4">Nee</span>
+                            @endif
+                        </div>
+                    </div>
 
                     <div class="bg-gray-100 dark:bg-gray-700 w-full rounded p-8 my-8">
                         <div class="w-full my-2">
@@ -41,21 +41,14 @@
                         </div>
 
                         <div class="w-full my-2">
-                            <label class="mx-auto my-2">Label</label>
-                            <div class="my-2 relative inline-flex ml-8">
-                                <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-                                <select class="border border-gray-300 text-gray-600 bg-white hover:border-gray-400 focus:outline-none appearance-none px-3 py-2 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400" style="width:300px;">
-                                    <option>ongeduld</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="w-full my-2">
                             <label class=" my-2">Onderwijseenheid</label>
                             <div class="my-2 relative inline-flex ml-8">
                                 <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
                                 <select class="border border-gray-300 text-gray-600 bg-white hover:border-gray-400 focus:outline-none appearance-none px-3 py-2 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400" style="width:300px;">
-                                    <option>Seriematige woningbouw 1</option>
+                                    <option disabled selected>Kies een optie...</option>
+                                    @foreach($onderwijseenheden as $eenheid)
+                                        <option>{{ $eenheid->eenheid }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -65,7 +58,10 @@
                             <div class="my-2 relative inline-flex ml-8">
                                 <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
                                 <select class="border border-gray-300 text-gray-600 bg-white hover:border-gray-400 focus:outline-none appearance-none px-3 py-2 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400" style="width:300px;">
-                                    <option>School (HU)</option>
+                                    <option disabled selected>Kies een optie...</option>
+                                    @foreach($opdrachtgevers as $opdrachtgever)
+                                        <option>{{ $opdrachtgever->voornaam }} {{ $opdrachtgever->achternaam }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -75,7 +71,10 @@
                             <div class="my-2 relative inline-flex ml-8">
                                 <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
                                 <select class="border border-gray-300 text-gray-600 bg-white hover:border-gray-400 focus:outline-none appearance-none px-3 py-2 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400" style="width:300px;">
-                                    <option>Voorlopig Ontwerp</option>
+                                    <option disabled selected>Kies een optie...</option>
+                                    @foreach($beroepsproducten as $beroepsproduct)
+                                        <option>{{ $beroepsproduct->beroepsproduct }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -83,30 +82,21 @@
                         <div class="w-full my-2">
                             <label class="mx-auto my-2">Competentie</label>
                             <div class="my-2 relative inline-flex ml-8">
-                                <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-                                <select class="border border-gray-300 text-gray-600 bg-white hover:border-gray-400 focus:outline-none appearance-none px-3 py-2 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400" style="width:300px;">
-                                    <option>Samenweken</option>
-                                </select>
+                                <span class="text-sm text-gray-900 dark:text-white ml-4">{{$datapunt->indicatoren->competenties->competentie}}</span>
                             </div>
                         </div>
 
                         <div class="w-full my-2">
                             <label class="mx-auto my-2">Niveau</label>
                             <div class="my-2 relative inline-flex ml-8">
-                                <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-                                <select class="border border-gray-300 text-gray-600 bg-white hover:border-gray-400 focus:outline-none appearance-none px-3 py-2 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400" style="width:300px;">
-                                    <option>1</option>
-                                </select>
+                                <span class="text-sm text-gray-900 dark:text-white ml-4">{{$datapunt->indicatoren->niveau}}</span>
                             </div>
                         </div>
 
                         <div class="w-full my-2">
                             <label class="mx-auto w-12 my-2">Indicator</label>
                             <div class="my-2 relative inline-flex ml-8">
-                                <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-                                <select class="border border-gray-300 text-gray-600 bg-white hover:border-gray-400 focus:outline-none appearance-none px-3 py-2 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400" style="width:300px;">
-                                    <option>Niveau 1: Toont belangstelling en respect voor de ander en houdt rekening in het handelen...</option>
-                                </select>
+                                <span class="text-sm text-gray-900 dark:text-white ml-4">{{$datapunt->indicatoren->indicator}}</span>
                             </div>
                         </div>
 
@@ -137,15 +127,15 @@
 
                             <div class="w-full my-4">
                                 <label>Feedback:</label>
-                                    <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
+                                <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
                             </div>
                             <div class="w-full my-4">
                                 <label>Feedup:</label>
-                                    <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
+                                <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
                             </div>
                             <div class="w-full my-4">
                                 <label>Feedforward: </label>
-                                    <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
+                                <textarea placeholder="Omdat..." class="mt-2 w-full border text-md text-gray-700 focus:outline-none px-6 py-3 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400"></textarea>
                             </div>
                         </div>
                     </div>
@@ -205,15 +195,15 @@
                             </div>
                         </div>
                     </div>
-            </div>
+                </div>
 
-            <div class="flex justify-center p-2">
-                <button class="bg-blue-500 font-semibold text-white dark:bg-green-500 p-2 w-32 rounded hover:bg-blue-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300" @click="showModal1 = false">
-                    Opslaan
-                </button>
-            </div>
+                <div class="flex justify-center p-2">
+                    <button class="bg-blue-500 font-semibold text-white dark:bg-green-500 p-2 w-32 rounded hover:bg-blue-600 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300" @click="showModal1 = false">
+                        Opslaan
+                    </button>
+                </div>
+                <p>{{ $datapunt->naam }}</p>
             </div>
         </div>
     </div>
-</div>
 </div>

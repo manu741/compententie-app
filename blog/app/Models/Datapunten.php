@@ -78,7 +78,7 @@ class Datapunten extends Model
      */
     public function indicatoren()
     {
-        return $this->belongsTo(Indicatoren::class);
+        return $this->belongsTo(Indicatoren::class, 'indicator_id');
     }
 
     /**
