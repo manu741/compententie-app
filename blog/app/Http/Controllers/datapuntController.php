@@ -23,8 +23,8 @@ class datapuntController extends Controller
             'opdrachtgevers' => Opdrachtgever::get(),
             'beroepsproducten' => Beroepsproduct::get()
         );
-//        foreach($data['opdrachtgevers'] as $data) {
-//            dd($data);
+//        foreach($data['datapunten'] as $data) {
+//            dd($data->opdrachtgever->voornaam);
 //        }
 
         return view('users.datapunt', $data);
@@ -46,6 +46,23 @@ class datapuntController extends Controller
         ]);
 
         return redirect()->route('dashboard');
+    }
+
+    public function saveDatapoint(Request $request, $id) {
+//        dd($request);
+        $datapunt = Datapunten::find($id);
+
+        $datapunt->onderwijseenheid_id = $request->onderwijseenheid;
+        $datapunt->opdrachtgever_id = $request->opdrachtgever;
+        $datapunt->beroepsproduct_id = $request->beroepsproduct;
+        $datapunt->onderbouwing = $request->onderbouwing;
+        $datapunt->feedback = $request->feedback;
+        $datapunt->feedup = $request->feedup;
+        $datapunt->feedforward = $request->feedforward;
+
+        $datapunt->save();
+        return redirect()->back();
+
     }
 
     public function GetNiveausAgainstCompetentieDrop($id){

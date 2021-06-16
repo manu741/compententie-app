@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef68f442-fc88-429a-8765-e27a9917b1ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_215000_create_datapunten_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database/migrations/2021_06_04_215000_create_datapunten_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/datapuntController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/datapuntController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Models/Beroepsproduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Beroepsproduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/app/Models/Opdrachtgever.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Opdrachtgever.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/resources/views/components/popup-datapunt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/components/popup-datapunt.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/resources/views/users/datapunt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/users/datapunt.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routes/web.php" afterDir="false" />
     </list>
     <list id="22ea55c7-0e71-44a9-a498-65fef81b0a29" name="Changes by nkhui" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +169,9 @@
       <workItem from="1623161220783" duration="875000" />
       <workItem from="1623233903680" duration="10996000" />
       <workItem from="1623662027224" duration="6367000" />
-      <workItem from="1623755818982" duration="21706000" />
+      <workItem from="1623755818982" duration="22428000" />
+      <workItem from="1623839474151" duration="9986000" />
+      <workItem from="1623851989406" duration="21000" />
     </task>
     <servers />
   </component>

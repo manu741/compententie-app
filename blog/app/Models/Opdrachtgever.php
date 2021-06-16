@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 /**
  * @property integer $id
@@ -40,6 +41,6 @@ class Opdrachtgever extends Model
      */
     public function datapuntens()
     {
-        return $this->hasMany('App\Datapunten');
+        return $this->hasMany(Datapunten::class);
     }
 }

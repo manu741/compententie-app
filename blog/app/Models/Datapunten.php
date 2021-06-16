@@ -54,7 +54,7 @@ class Datapunten extends Model
      */
     public function onderwijseenheid()
     {
-        return $this->belongsTo('App\Onderwijseenheid');
+        return $this->belongsTo(Onderwijseenheid::class, 'onderwijseenheid_id');
     }
 
     /**
@@ -62,7 +62,7 @@ class Datapunten extends Model
      */
     public function opdrachtgever()
     {
-        return $this->belongsTo('App\Opdrachtgever');
+        return $this->belongsTo(Opdrachtgever::class, 'opdrachtgever_id');
     }
 
     /**
@@ -70,7 +70,7 @@ class Datapunten extends Model
      */
     public function beroepsproduct()
     {
-        return $this->belongsTo('App\Beroepsproduct');
+        return $this->belongsTo(Beroepsproduct::class, 'beroepsproduct_id');
     }
 
     /**

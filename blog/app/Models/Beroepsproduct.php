@@ -36,6 +36,6 @@ class Beroepsproduct extends Model
      */
     public function datapuntens()
     {
-        return $this->hasMany('App\Datapunten');
+        return $this->hasMany(Datapunten::class);
     }
 }
