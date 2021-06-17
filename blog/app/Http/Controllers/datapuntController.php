@@ -45,7 +45,7 @@ class datapuntController extends Controller
             'bevroren' => False,
         ]);
 
-        return redirect()->route('dashboard');
+        return redirect()->back();
     }
 
     public function saveDatapoint(Request $request, $id) {
