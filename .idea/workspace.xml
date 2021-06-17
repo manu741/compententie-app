@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ef68f442-fc88-429a-8765-e27a9917b1ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Http/Controllers/datapuntController.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Http/Controllers/datapuntController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Datapunten.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/app/Models/Onderwijseenheid.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/app/Models/Onderwijseenheid.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/resources/views/components/popup-datapunt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/components/popup-datapunt.blade.php" afterDir="false" />
     </list>
-    <list id="7ab3c780-f264-4214-b66e-c822fcd9b526" name="Changes by leon" comment="">
-      <change beforePath="$PROJECT_DIR$/blog/resources/views/components/popup-datapunt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/blog/resources/views/components/popup-datapunt.blade.php" afterDir="false" />
-    </list>
+    <list id="7ab3c780-f264-4214-b66e-c822fcd9b526" name="Changes by leon" comment="" />
     <list id="22ea55c7-0e71-44a9-a498-65fef81b0a29" name="Changes by nkhui" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +179,7 @@
       <workItem from="1623755818982" duration="22428000" />
       <workItem from="1623839474151" duration="9986000" />
       <workItem from="1623851989406" duration="21000" />
-      <workItem from="1623931393939" duration="3973000" />
+      <workItem from="1623931393939" duration="5736000" />
     </task>
     <servers />
   </component>
