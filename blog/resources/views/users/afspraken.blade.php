@@ -209,4 +209,44 @@
             </div>
         </div>
     </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#competentie_drop').on('change', function () {
+                    $('#indicator_omschrijving').empty();
+                    let id = $(this).val();
+                    let niveau = $('#niveau_drop');
+                    $.ajax({
+                        type: 'GET',
+                        url: 'AddCompetentiesToDropdown/' + id,
+                        success: function (response) {
+                            response = JSON.parse(response);
+                            console.log(response);
+                            niveau.empty();
+                            niveau.append(`<option value="0" disabled selected>Kies een optie...</option>`);
+                            response.forEach(element => {
+                                niveau.append(`<option value="${element['id']}">${element['niveau']}</option>`);
+                            });
+                        }
+                    })
+                })
+
+                $('#niveau_drop').on('change', function () {
+                    let id = $(this).val();
+                    let indicator = $('#indicator_omschrijving');
+                    $.ajax({
+                        type: 'GET',
+                        url: 'GetIndicatorAgainstNiveau/' + id,
+                        success: function (response) {
+                            response = JSON.parse(response);
+                            console.log(response);
+                            indicator.empty();
+                            indicator.append(`<span>${response["indicator"]}</span>`);
+                        }
+                    })
+                })
+            });
+        </script>
 @endsection
