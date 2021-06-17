@@ -15,18 +15,18 @@ class CreateDatapuntenTable extends Migration
     {
         Schema::create('datapunten', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('onderwijseenheid_id')->constrained()->references('id')->on('onderwijseenheid')->onDelete('cascade');
-            $table->foreignId('opdrachtgever_id')->constrained()->references('id')->on('opdrachtgever')->onDelete('cascade');
-            $table->foreignId('beroepsproduct_id')->constrained()->references('id')->on('beroepsproduct')->onDelete('cascade');
-            $table->foreignId('competentie_id')->constrained()->references('id')->on('competentie')->onDelete('cascade');
+            $table->foreignId('onderwijseenheid_id')->nullable()->constrained()->references('id')->on('onderwijseenheid')->onDelete('cascade');
+            $table->foreignId('opdrachtgever_id')->nullable()->constrained()->references('id')->on('opdrachtgever')->onDelete('cascade');
+            $table->foreignId('beroepsproduct_id')->nullable()->constrained()->references('id')->on('beroepsproduct')->onDelete('cascade');
+            $table->foreignId('indicator_id')->constrained()->references('id')->on('indicatoren')->onDelete('cascade');
             $table->foreignId('user_id')->constrained()->references('id')->on('users')->onDelete('cascade');
-            $table->foreignId('pop_id')->constrained()->references('id')->on('pop')->onDelete('cascade');
+            $table->foreignId('pop_id')->nullable()->constrained()->references('id')->on('pop')->onDelete('cascade');
             $table->char('naam');
             $table->boolean('bevroren');
-            $table->text('onderbouwing');
-            $table->text('feedback');
-            $table->text('feedup');
-            $table->text('feedforward');
+            $table->text('onderbouwing')->nullable();
+            $table->text('feedback')->nullable();
+            $table->text('feedup')->nullable();
+            $table->text('feedforward')->nullable();
             $table->binary('bijlage')->nullable();
             $table->timestamps();
 

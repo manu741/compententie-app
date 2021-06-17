@@ -49,3 +49,4 @@ Route::get('/pop/datapunt', [datapuntController::class, 'index'])->name('datapun
 Route::post('/pop/datapunt/save', [datapuntController::class, 'emptyDatapunt'])->name('emptyDatapunt');
 Route::get('/pop/GetNiveausAgainstCompetentieDrop/{id}', [datapuntController::class, 'GetNiveausAgainstCompetentieDrop'])->name('loadNiveauData');
 Route::get('/pop/GetIndicatorAgainstNiveau/{pop}', [datapuntController::class, 'GetIndicatorAgainstNiveau'])->name('loadIndicator');
+Route::post('/pop/datapunt/saveDatapoint{id}', [datapuntController::class, 'saveDatapoint'])->name('saveDatapoint');

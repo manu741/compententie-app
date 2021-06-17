@@ -15,7 +15,6 @@ class CreatePopTable extends Migration
     {
         Schema::create('pop', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('popcyclusdatum_id')->constrained()->references('id')->on('popcyclusdatum')->onDelete('cascade');
             $table->string('popnaam');
             $table->integer('niveau');

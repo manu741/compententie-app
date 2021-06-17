@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,14 +14,14 @@ class Beroepsproduct extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'beroepsproduct';
 
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -36,6 +36,6 @@ class Beroepsproduct extends Model
      */
     public function datapuntens()
     {
-        return $this->hasMany('App\Datapunten');
+        return $this->hasMany(Datapunten::class);
     }
 }

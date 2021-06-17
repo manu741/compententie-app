@@ -1,8 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 /**
  * @property integer $id
@@ -18,14 +19,14 @@ class Opdrachtgever extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'opdrachtgever';
 
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -40,6 +41,6 @@ class Opdrachtgever extends Model
      */
     public function datapuntens()
     {
-        return $this->hasMany('App\Datapunten');
+        return $this->hasMany(Datapunten::class);
     }
 }

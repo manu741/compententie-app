@@ -16,6 +16,7 @@ class CreateOnderwijseenheidTable extends Migration
         Schema::create('onderwijseenheid', function (Blueprint $table) {
             $table->id();
             $table->foreignId('opleiding_id')->references('id')->on('opleiding')->constrained()->onDelete('cascade');
+            $table->string('eenheid');
             $table->enum('vorm', ['deeltijd', 'voltijd']);
             $table->enum('fase', ['propedeuse', 'hoofdfase']);
             $table->enum('type', ['specialisatie', 'cursorisch', 'afstuderen', 'stage']);

@@ -47,14 +47,14 @@ class Datapunten extends Model
     /**
      * @var array
      */
-    protected $fillable = ['onderwijseenheid_id', 'opdrachtgever_id', 'beroepsproduct_id', 'competentie_id', 'user_id', 'pop_id', 'bevroren', 'onderbouwing', 'feedback', 'feedup', 'feedforward', 'bijlage', 'created_at', 'updated_at'];
+    protected $fillable = ['onderwijseenheid_id', 'opdrachtgever_id', 'beroepsproduct_id', 'indicator_id', 'user_id', 'pop_id', 'bevroren', 'naam', 'onderbouwing', 'feedback', 'feedup', 'feedforward', 'bijlage', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function onderwijseenheid()
     {
-        return $this->belongsTo('App\Onderwijseenheid');
+        return $this->belongsTo(Onderwijseenheid::class, 'onderwijseenheid_id');
     }
 
     /**
@@ -62,7 +62,7 @@ class Datapunten extends Model
      */
     public function opdrachtgever()
     {
-        return $this->belongsTo('App\Opdrachtgever');
+        return $this->belongsTo(Opdrachtgever::class, 'opdrachtgever_id');
     }
 
     /**
@@ -70,15 +70,15 @@ class Datapunten extends Model
      */
     public function beroepsproduct()
     {
-        return $this->belongsTo('App\Beroepsproduct');
+        return $this->belongsTo(Beroepsproduct::class, 'beroepsproduct_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function competentie()
+    public function indicatoren()
     {
-        return $this->belongsTo('App\Competentie');
+        return $this->belongsTo(Indicatoren::class, 'indicator_id');
     }
 
     /**

@@ -16,6 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->foreignId('opleiding_id')->nullable()->constrained()->references('id')->on('opleiding')->onDelete('cascade');
+            $table->foreignId('pop_id')->nullable()->constrained()->references('id')->on('pop')->onDelete('cascade');
             $table->string('cohort')->nullable();
             $table->string('firstname');
             $table->string('lastname');

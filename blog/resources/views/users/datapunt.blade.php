@@ -37,6 +37,18 @@
                 </span>
 
                     <div class="mt-2 mb-2 ">
+                        <span class="mr-8 ml-12">Titel:</span>
+                        <div class="relative inline-flex">
+                            <input name="naam" type="text" class="@error('naam') border-red-500 @enderror">
+                            @error('naam')
+                            <div class="text-red-500 mt-2 text-sm">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="mt-2 mb-2 ">
                         <span class="mr-8 ml-12">Competentie:</span>
                         <div class="relative inline-flex">
                             <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
@@ -46,6 +58,11 @@
                                     <option value="{{ $competentie->id }}">{{$competentie->competentie}}</option>
                                 @endforeach
                             </select>
+                            @error('competentie')
+                            <div class="text-red-500 mt-2 text-sm">
+                                {{ $message }}
+                            </div>
+                            @enderror
                         </div>
                     </div>
 
@@ -56,31 +73,26 @@
                             <select name="niveau" id="niveau_drop" class="border border-gray-300 text-gray-600 bg-white hover:border-gray-400 focus:outline-none appearance-none px-3 py-2 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-500 dark:hover:border-gray-800 hover:border-gray-400" style="width:180px;">
                                 <option value="0" disabled selected>Kies competentie</option>
                             </select>
+                            @error('niveau')
+                            <div class="text-red-500 mt-2 text-sm">
+                                {{ $message }}
+                            </div>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="mt-2 mb-2 ">
                         <span class="mr-8 ml-12">Indicator:</span>
                         <div class="relative inline-flex">
-                            <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
                             <div id="indicator_omschrijving">{{--Append vanuit javascript--}}</div>
                         </div>
                     </div>
 
 
                     <div class="flex mt-10 ml-12 mb-4">
-                            <button type="submit" class="w-3/12 h-10 rounded-md flex items-center justify-center px-8 py-3 mr-10 mt-2 mb-2 border border-transparent text-base font-medium text-white bg-blue-500 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-green-600 md:py-4 md:text-lg md:px-10">
-                                Datapunt toevoegen
-                            </button>
-
-
-                        <a href="" class="w-3/12 h-10 rounded-md flex items-center justify-center px-8 py-3 mr-10 mt-2 mb-2 border border-transparent text-base font-medium text-white bg-blue-500 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-green-600 md:py-4 md:text-lg md:px-10">
-                            Datapunt verwijderen
-                        </a>
-
-                        <a href="" class="w-2/12 h-10 rounded-md flex items-center justify-center px-8 py-3 mt-2 mb-2 border border-transparent text-base font-medium text-blue-500 border-blue-500 dark:bg-gray-700 dark:text-green-400 dark:border-green-400 md:py-4 md:text-lg md:px-10">
-                            Refresh
-                        </a>
+                        <button type="submit" class="w-3/12 h-10 rounded-md flex items-center justify-center px-8 py-3 mr-10 mt-2 mb-2 border border-transparent text-base font-medium text-white bg-blue-500 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-green-600 md:py-4 md:text-lg md:px-10">
+                            Datapunt toevoegen
+                        </button>
                     </div>
                 </div>
             </div>
@@ -99,112 +111,67 @@
 
                                 <table class="min-w-full mb-10 max-w-xl divide-y divide-gray-200 dark:divide-gray-500 border-gray-800">
                                     <thead class="bg-gray-100 dark:bg-gray-700">
-                                    <tr>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
-                                            Datapunt naam
-                                        </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
-                                            Aanmaak datum
-                                        </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
-                                            Onderwijs eenheid
-                                        </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
-                                            Competentie
-                                        </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
-                                            Niveau
-                                        </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
-                                            Indicator
-                                        </th>
+                                        <tr>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
+                                                Datapunt naam
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
+                                                Aanmaak datum
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
+                                                Competentie
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
+                                                Niveau
+                                            </th>
+                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider">
+                                                Bevroren
+                                            </th>
 
-                                    </tr>
+                                        </tr>
                                     </thead>
                                     <tbody class="bg-gray-100 dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-800">
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="flex items-center">
-                                                <div class="text-sm text-gray-900 dark:text-white">Datapunt 1</div>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="text-sm text-gray-900 dark:text-white">18-05-2021</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">1 Jaar</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">Samenwerking</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">Niveau 1</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">Indicator naam</div>
-                                        </td>
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="flex items-center">
-                                                <div class="text-sm text-gray-900 dark:text-white">Datapunt 1</div>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="text-sm text-gray-900 dark:text-white">18-05-2021</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">1 Jaar</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">Samenwerking</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">Niveau 1</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">Indicator naam</div>
-                                        </td>
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="flex items-center">
-                                                <div class="text-sm text-gray-900 dark:text-white">Datapunt 1</div>
-                                            </div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <div class="text-sm text-gray-900 dark:text-white">18-05-2021</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">1 Jaar</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">Samenwerking</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">Niveau 1</div>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap dark:text-white">
-                                            <div class="text-sm text-gray-900 dark:text-white">Indicator naam</div>
-                                        </td>
+                                        @foreach($datapunten as $datapunt)
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    <div class="flex items-center">
+                                                        <div class="text-sm text-gray-900 dark:text-white">{{$datapunt->naam}}</div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    <div class="text-sm text-gray-900 dark:text-white">{{ $datapunt->created_at->format('d/m/Y')}}</div>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap dark:text-white">
+                                                    <div class="text-sm text-gray-900 dark:text-white">{{ $datapunt->indicatoren->competenties->competentie }}</div>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap dark:text-white">
+                                                    <div class="text-sm text-gray-900 dark:text-white">{{ $datapunt->indicatoren->niveau }}</div>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap dark:text-white">
+                                                    @if ($datapunt->bevroren)
+                                                        <div class="text-sm text-gray-900 dark:text-white">Ja</div>
+                                                    @else
+                                                        <div class="text-sm text-gray-900 dark:text-white">Nee</div>
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <div x-data="{ showModal1: false, showModal2: false, showModal3: false }" :class="{'overflow-y-hidden': showModal1 || showModal2 || showModal3}" x-cloak>
+                                                        <button class="bg-blue-500 dark:bg-green-500 font-semibold text-white px-8 h-10 w-32 rounded hover:bg-blue-600 dark:hover:bg-green-600 focus:outline-none mt-2" @click="showModal1 = true">
+                                                            Details
+                                                        </button>
+                                                        <!-- Modal Reflecties -->
+                                                        <x-popupDatapunt :datapunt="$datapunt" :onderwijseenheden="$onderwijseenheden" :opdrachtgevers="$opdrachtgevers" :beroepsproducten="$beroepsproducten"/>
+                                                    </div>
+                                                </td>
+                                            <tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
-
-                                <div x-data="{ showModal1: false, showModal2: false, showModal3: false }" :class="{'overflow-y-hidden': showModal1 || showModal2 || showModal3}" x-cloak>
-                                    <button class="bg-blue-500 dark:bg-green-500 font-semibold text-white px-8 h-10 w-32 rounded hover:bg-blue-600 dark:hover:bg-green-600 focus:outline-none mt-2" @click="showModal1 = true">
-                                        Details
-                                    </button>
-                                    <!-- Modal Reflecties -->
-                                    <x-popupDatapunt/>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="flex justify-center">
-            <a href="" class="w-2/12 rounded-md flex justify-center px-8 py-3 mr-10 mt-2 mb-2 border border-transparent text-base font-medium text-white bg-blue-500 dark:bg-green-500 hover:bg-blue-700 dark:hover:bg-green-700 md:py-4 md:text-lg md:px-10">
-                Opslaan
-            </a>
         </div>
     </div>
 
