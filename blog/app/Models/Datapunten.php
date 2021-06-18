@@ -52,7 +52,13 @@ class Datapunten extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function onderwijseenheid()
+    public function zichtbaar()
+    {
+        return $this->morphTo();
+    }
+    
+    
+     public function onderwijseenheid()
     {
         return $this->belongsTo(Onderwijseenheid::class, 'onderwijseenheid_id');
     }

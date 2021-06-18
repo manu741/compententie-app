@@ -50,7 +50,7 @@ class CompetentieController extends Controller
     {
         return view('competenties.show', [
             'competentie' => $competentie
-        ]);s
+        ]);
     }
 
     /**

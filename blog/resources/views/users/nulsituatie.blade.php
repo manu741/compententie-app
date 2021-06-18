@@ -189,7 +189,7 @@
     <script type="text/javascript">
         let sel = document.getElementById('nulsituatie_id');
 
-        sel.addEventListener('click', function(e) {
+        sel.addEventListener('change', function(e) {
             let price = e.srcElement.selectedOptions["0"].dataset.price;
             let price2 = e.srcElement.selectedOptions["0"].dataset.price2;
             let price3 = e.srcElement.selectedOptions["0"].dataset.price3;
